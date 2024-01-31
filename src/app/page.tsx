@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import { Logo } from "@src/components/icons";
+import { LinkIcon, Logo } from "@src/components/icons";
 import FancyCard from "@src/components/fancy-card";
 
 const Home: FC = () => {
@@ -43,10 +43,19 @@ const Home: FC = () => {
             </div>
           </div>
         </FancyCard>
-        <FancyCard className="col-span-4 row-span-4"></FancyCard>
+        <div className="col-span-4 row-span-4 flex flex-col justify-around rounded-2xl bg-cyan-500 p-6">
+          <div className="flex flex-col">
+            <div className="flex items-center justify-between">
+              <div className="font-monda text-2xl font-bold">Testimonial</div>
+              <LinkIcon />
+            </div>
+            <div className="font-monda text-sm">Recover our history</div>
+          </div>
+          <div className="text-sm text-zinc-950">Recover our history</div>
+        </div>
         <FancyCard className="col-span-12 row-span-9"></FancyCard>
-        <FancyCard className="col-span-2 row-span-5"></FancyCard>
-        <FancyCard className="col-span-2 row-span-5"></FancyCard>
+        <div className="col-span-2 row-span-5 rounded-2xl bg-rose-600"></div>
+        <div className="col-span-2 row-span-5 rounded-2xl bg-rose-600"></div>
       </div>
     </>
   );
