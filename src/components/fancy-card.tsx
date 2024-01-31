@@ -9,7 +9,7 @@ const FancyCard: FC<HTMLProps<HTMLDivElement>> = (props) => {
       ref={refProp}
       {...otherProps}
     >
-      <div className="rounded-[calc(1rem-1px)] bg-gradient-to-r from-zinc-950 to-teal-950">
+      <div className="grid rounded-[calc(1rem-1px)] bg-gradient-to-r from-zinc-950 to-teal-950">
         {children}
       </div>
     </div>
