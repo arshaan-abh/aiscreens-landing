@@ -43,19 +43,30 @@ const Home: FC = () => {
             </div>
           </div>
         </FancyCard>
-        <div className="col-span-4 row-span-4 flex flex-col justify-between rounded-2xl bg-cyan-500 p-6">
+        <div className="col-span-4 row-span-4 flex flex-col rounded-2xl bg-cyan-500 p-6 font-monda">
           <div className="flex flex-col">
             <div className="flex items-center justify-between">
-              <div className="font-monda text-2xl font-bold">Testimonial</div>
+              <div className="text-2xl font-bold">Testimonial</div>
               <LinkIcon />
             </div>
-            <div className="font-monda text-sm">Recover our history</div>
+            <div className="text-sm">Recover our history</div>
           </div>
+          <div className="min-h-6 grow" />
           <div className="text-sm text-zinc-950">Recover our history</div>
         </div>
         <FancyCard className="col-span-12 row-span-9"></FancyCard>
-        <div className="col-span-2 row-span-5 rounded-2xl bg-rose-600"></div>
-        <div className="col-span-2 row-span-5 rounded-2xl bg-rose-600"></div>
+        <div className="col-span-2 row-span-5 flex flex-col rounded-2xl bg-rose-600 p-6 font-monda">
+          <LinkIcon className="mb-4" />
+          <div className="text-sm">Do you have any question?</div>
+          <div className="min-h-6 grow" />
+          <div className="text-2xl font-bold">Contact Us</div>
+        </div>
+        <div className="col-span-2 row-span-5 flex flex-col rounded-2xl bg-rose-600 p-6 font-monda">
+          <LinkIcon className="mb-4" />
+          <div className="text-sm">recover our history</div>
+          <div className="min-h-6 grow" />
+          <div className="text-2xl font-bold">about Us</div>
+        </div>
       </div>
     </>
   );
