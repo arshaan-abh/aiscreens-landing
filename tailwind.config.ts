@@ -8,6 +8,8 @@ const config: Config = {
       fontFamily: {
         inter: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         rubik: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
+        manrope: ["var(--font-manrope)", ...defaultTheme.fontFamily.sans],
+        monda: ["var(--font-monda)", ...defaultTheme.fontFamily.sans],
       },
       width: {
         main: "64rem",
