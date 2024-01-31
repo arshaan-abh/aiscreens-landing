@@ -43,7 +43,7 @@ const Home: FC = () => {
             </div>
           </div>
         </FancyCard>
-        <div className="col-span-4 row-span-4 flex flex-col justify-around rounded-2xl bg-cyan-500 p-6">
+        <div className="col-span-4 row-span-4 flex flex-col justify-between rounded-2xl bg-cyan-500 p-6">
           <div className="flex flex-col">
             <div className="flex items-center justify-between">
               <div className="font-monda text-2xl font-bold">Testimonial</div>
