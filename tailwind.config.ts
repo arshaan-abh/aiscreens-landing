@@ -12,7 +12,7 @@ const config: Config = {
         monda: ["var(--font-monda)", ...defaultTheme.fontFamily.sans],
       },
       width: {
-        main: "64rem",
+        main: "80rem",
       },
     },
   },
