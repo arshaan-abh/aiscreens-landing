@@ -30,14 +30,14 @@ const Home: FC = () => {
           </div>
         </FancyCard>
         <FancyCard className="col-span-12 row-span-7">
-          <div className="grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(1,1fr)] gap-8 px-8">
-            <div className="col-span-1 row-span-1 flex flex-col justify-center py-4 font-manrope text-7xl font-extrabold -tracking-widest">
+          <div className="grid grid-cols-[repeat(2,1fr)] gap-8 px-8">
+            <div className="flex flex-col justify-center py-4 font-manrope text-7xl font-extrabold -tracking-widest">
               <div>Unleash</div>
               <div className="text-cyan-500">Your Screen&apos;s</div>
               <div className="text-end">Untapped</div>
               <div className="text-end">Potential</div>
             </div>
-            <div className="col-span-1 row-span-1 py-8 font-monda text-xl">
+            <div className="py-8 font-monda text-xl">
               AiScreens - Unleash Your l Craft, Schedule, and Innovate, Anytime,
               Anywhere Welcome to AiScreens, meets limitless possibilities.
             </div>
