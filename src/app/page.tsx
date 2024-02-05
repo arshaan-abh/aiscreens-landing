@@ -1,6 +1,9 @@
 import type { FC } from "react";
-import { LinkIcon, Logo } from "@src/components/icons";
+import { LinkIcon, Logo, UserIcon } from "@src/components/icons";
 import FancyCard from "@src/components/fancy-card";
+import AvatarGroup from "@src/components/avatar-group";
+import Image from "next/image";
+import slide1 from "/public/slide-1.png";
 
 const Home: FC = () => {
   return (
@@ -31,9 +34,11 @@ const Home: FC = () => {
         </FancyCard>
         <FancyCard className="col-span-12 row-span-7">
           <div className="grid grid-cols-[repeat(2,1fr)] gap-8 px-8">
-            <div className="flex flex-col justify-center py-4 font-manrope text-7xl font-extrabold -tracking-widest">
+            <div className="flex flex-col justify-center py-6 font-manrope text-7xl font-extrabold -tracking-widest">
               <div>Unleash</div>
-              <div className="text-cyan-500">Your Screen&apos;s</div>
+              <div className="whitespace-nowrap text-cyan-500">
+                Your Screen&apos;s
+              </div>
               <div className="text-end">Untapped</div>
               <div className="text-end">Potential</div>
             </div>
@@ -52,9 +57,36 @@ const Home: FC = () => {
             <div className="text-sm">Recover our history</div>
           </div>
           <div className="min-h-2 grow" />
-          <div className="text-sm text-zinc-950">Recover our history</div>
+          <div className="flex items-center gap-2 text-sm text-zinc-950">
+            <AvatarGroup
+              avatars={[
+                <UserIcon key={0} className="text-white" />,
+                <UserIcon key={1} className="text-white" />,
+                <UserIcon key={2} className="text-white" />,
+              ]}
+            />
+            Recover our history
+          </div>
         </div>
-        <FancyCard className="col-span-12 row-span-9"></FancyCard>
+        <FancyCard className="col-span-12 row-span-9">
+          <div className="grid grid-cols-[repeat(2,1fr)] gap-8 py-8">
+            <div className="flex flex-col justify-between gap-8 pl-8">
+              <div className="font-monda text-2xl font-bold">
+                Cloud Control Panel
+              </div>
+              <div className="font-monda text-lg">
+                AiScreens - Unleash Your Screen&#39;s Untapped Potential
+                <br />
+                Craft, Schedule, and Innovate, Anytime, Welcome to f screen
+                marketings possibilities. Dispelling videos, and persuasive text
+                to showcase your services or products. Wit...
+              </div>
+            </div>
+            <div className="flex items-center justify-end">
+              <Image src={slide1} alt="Slide 1" />
+            </div>
+          </div>
+        </FancyCard>
         <div className="col-span-2 row-span-5 flex flex-col rounded-2xl bg-rose-600 p-4 font-monda">
           <LinkIcon className="mb-2" />
           <div className="text-sm">Do you have any question?</div>

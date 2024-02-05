@@ -64,7 +64,7 @@ export const UserIcon: FC<IconProps> = (props) => {
       width="24"
       height="24"
       fill="currentColor"
-      fill-rule="evenodd"
+      fillRule="evenodd"
       ref={refProp}
       {...otherProps}
     >
