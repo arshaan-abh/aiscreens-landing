@@ -149,13 +149,13 @@ const Home: FC = () => {
           </div>
         </div>
         <div className="pointer-events-none fixed inset-0 top-auto h-48 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
-        <SheetContent className="bg-teal-950">
+        <SheetContent className="border-teal-900 bg-teal-950">
           <SheetHeader>
             <SheetTitle className="text-white">Menu</SheetTitle>
           </SheetHeader>
-          <div className="border-b py-4">Home</div>
-          <div className="border-b py-4">Features</div>
-          <div className="border-b py-4">Services</div>
+          <div className="border-b border-teal-900 py-4">Home</div>
+          <div className="border-b border-teal-900 py-4">Features</div>
+          <div className="border-b border-teal-900 py-4">Services</div>
         </SheetContent>
       </Sheet>
     </>
