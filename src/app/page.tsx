@@ -25,7 +25,7 @@ const Home: FC = () => {
             <div>Services</div>
           </div>
           <button className="hidden rounded-full bg-cyan-500 px-4 py-2 text-xs font-medium sm:flex">
-            View plans
+            Sign In
           </button>
           <SheetTrigger className="sm:hidden">
             <Menu />
@@ -39,12 +39,12 @@ const Home: FC = () => {
           >
             <div className="flex flex-col items-center justify-end gap-4 p-8">
               <div className="flex grow items-center text-center font-monda text-lg">
-                and Innovate, Anytime, Welcome to f screen marketings
-                possibilities. Dispelling videos, and persuasive text to
-                showcase your products.
+                Take the next step with confidence – smart campaigns are just a
+                few clicks away. Our user-friendly product is designed to ensure
+                your success.
               </div>
               <button className="rounded-lg bg-cyan-500 px-16 py-2 font-medium">
-                Publish
+                Start
               </button>
             </div>
           </FancyCard>
@@ -63,9 +63,10 @@ const Home: FC = () => {
                 <div className="sm:text-end">Potential</div>
               </div>
               <div className="pb-12 text-center font-monda text-xl sm:py-8 sm:text-start">
-                AiScreens - Unleash Your l Craft, Schedule, and Innovate,
-                Anytime, Anywhere Welcome to AiScreens, meets limitless
-                possibilities.
+                Welcome to AiScreens,where the art of screen marketing meets
+                limitless possibilities. Direct your brand&#39;s story by
+                orchestrating visually stunning imagery, compelling videos,and
+                persuasive text to showcase your services or products...
               </div>
             </div>
           </FancyCard>
@@ -105,11 +106,11 @@ const Home: FC = () => {
                   Cloud Control Panel
                 </div>
                 <div className="font-monda text-lg">
-                  AiScreens - Unleash Your Screen&#39;s Untapped Potential
-                  <br />
-                  Craft, Schedule, and Innovate, Anytime, Welcome to f screen
-                  marketings possibilities. Dispelling videos, and persuasive
-                  text to showcase your services or products. Wit...
+                  We understand the challenges of gathering marketing materials
+                  and ideas, as well as the distractions they can bring.
+                  That&#39;s why we&#39;ve revamped the entire process to make
+                  it not only smoother but also highly efficient.The
+                  AiScreens&#39; Cloud All-in-One Control...
                 </div>
               </div>
               <div className="order-1 ml-8 flex items-center justify-end sm:order-2 sm:ml-0">
@@ -125,8 +126,9 @@ const Home: FC = () => {
             lg:col-span-2 lg:row-span-5"
           >
             <LinkIcon className="mb-2" />
-            <div className="hidden text-sm sm:flex">
-              Do you have any question?
+            <div className="hidden text-sm capitalize sm:flex">
+              Contact us today to commence crafting professional screen
+              experiences.
             </div>
             <div className="grow sm:min-h-2" />
             <div className="text-2xl font-bold">Contact Us</div>
@@ -139,7 +141,9 @@ const Home: FC = () => {
             lg:col-span-2 lg:row-span-5"
           >
             <LinkIcon className="mb-2" />
-            <div className="hidden text-sm sm:flex">recover our history</div>
+            <div className="hidden text-sm capitalize sm:flex">
+              We are committed to reshaping the future of screen marketing.
+            </div>
             <div className="grow sm:min-h-2" />
             <div className="text-2xl font-bold">about Us</div>
           </div>
