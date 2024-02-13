@@ -27,14 +27,18 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      screens: {
+        "2xs": "352px",
+        xs: "528px",
+      },
+      width: {
+        main: "80rem",
+      },
       fontFamily: {
         inter: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         rubik: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
         manrope: ["var(--font-manrope)", ...defaultTheme.fontFamily.sans],
         monda: ["var(--font-monda)", ...defaultTheme.fontFamily.sans],
-      },
-      width: {
-        main: "80rem",
       },
     },
   },

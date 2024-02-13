@@ -54,7 +54,12 @@ const Home: FC = () => {
           lg:col-span-12 lg:row-span-7"
           >
             <div className="grid gap-8 px-8 sm:grid-cols-[repeat(2,1fr)]">
-              <div className="flex flex-col justify-center pt-12 text-center font-manrope text-7xl font-extrabold -tracking-widest sm:py-6 sm:text-start">
+              <div
+                className="flex flex-col
+              justify-center pt-12 text-center font-manrope text-4xl font-extrabold
+              -tracking-widest
+              2xs:text-5xl xs:text-7xl sm:py-6 sm:text-start"
+              >
                 <div>Unleash</div>
                 <div className="whitespace-nowrap text-cyan-500">
                   Your Screen&apos;s
@@ -100,8 +105,8 @@ const Home: FC = () => {
           sm:col-start-1 sm:col-end-[17] sm:row-start-6 sm:row-end-[11]
           lg:col-span-12 lg:row-span-9"
           >
-            <div className="grid grid-cols-[repeat(2,1fr)] gap-8 py-8">
-              <div className="flex flex-col justify-between gap-8 pl-8">
+            <div className="grid grid-cols-[repeat(1,1fr)] gap-8 py-8 sm:grid-cols-[repeat(2,1fr)]">
+              <div className="order-2 flex flex-col justify-between gap-8 pl-8 sm:order-1">
                 <div className="font-monda text-2xl font-bold">
                   Cloud Control Panel
                 </div>
@@ -113,13 +118,13 @@ const Home: FC = () => {
                   text to showcase your services or products. Wit...
                 </div>
               </div>
-              <div className="flex items-center justify-end">
+              <div className="order-1 flex items-center justify-end sm:order-2">
                 <Image src={slide1} alt="Slide 1" />
               </div>
             </div>
           </FancyCard>
           <div
-            className="sticky bottom-8 col-start-9
+            className="sticky bottom-8 z-10 col-start-9
           col-end-[17] row-start-[16] row-end-[17] flex
           flex-col rounded-2xl bg-rose-600 p-4 font-monda
           sm:static sm:col-start-9 sm:col-end-13 sm:row-start-[14] sm:row-end-[17]
@@ -131,7 +136,7 @@ const Home: FC = () => {
             <div className="text-2xl font-bold">Contact Us</div>
           </div>
           <div
-            className="sticky bottom-8 col-start-1
+            className="sticky bottom-8 z-10 col-start-1
           col-end-9 row-start-[16] row-end-[17] flex
           flex-col rounded-2xl bg-rose-600 p-4 font-monda
           sm:static sm:col-start-13 sm:col-end-[17] sm:row-start-[14] sm:row-end-[17]
@@ -143,6 +148,7 @@ const Home: FC = () => {
             <div className="text-2xl font-bold">about Us</div>
           </div>
         </div>
+        <div className="pointer-events-none fixed inset-0 top-auto h-48 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
         <SheetContent className="bg-teal-950">
           <SheetHeader>
             <SheetTitle className="text-white">Menu</SheetTitle>
