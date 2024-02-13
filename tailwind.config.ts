@@ -28,8 +28,9 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       screens: {
-        "2xs": "352px",
-        xs: "528px",
+        "3xs": "360px",
+        "2xs": "400px",
+        xs: "480px",
       },
       width: {
         main: "80rem",
