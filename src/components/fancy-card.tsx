@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import HTMLProps from "@src/interfaces/html-props";
+import HTMLProps from "@/interfaces/html-props";
 
 const FancyCard: FC<HTMLProps<HTMLDivElement>> = (props) => {
   const { className, refProp, children, ...otherProps } = props;

@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from "react";
-import HTMLProps from "@src/interfaces/html-props";
+import HTMLProps from "@/interfaces/html-props";
 
 interface AvatarGroupProps extends HTMLProps<HTMLDivElement> {
   avatars: ReactNode[];
