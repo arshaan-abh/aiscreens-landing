@@ -17,7 +17,7 @@ const Home: FC = () => {
   return (
     <>
       <Sheet>
-        <div className="flex w-main max-w-full items-center justify-between p-8">
+        <div className="sticky top-0 flex w-main max-w-full items-center justify-between bg-gradient-to-b from-zinc-950 to-transparent p-8">
           <Logo />
           <div className="hidden gap-8 font-rubik text-sm sm:flex">
             <div>Home</div>
@@ -148,7 +148,7 @@ const Home: FC = () => {
             <div className="text-2xl font-bold">about Us</div>
           </div>
         </div>
-        <div className="pointer-events-none fixed inset-0 top-auto h-48 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
+        <div className="pointer-events-none fixed inset-0 top-auto h-96 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
         <SheetContent className="border-teal-900 bg-teal-950">
           <SheetHeader>
             <SheetTitle className="text-white">Menu</SheetTitle>
