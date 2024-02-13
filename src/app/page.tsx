@@ -54,12 +54,7 @@ const Home: FC = () => {
           lg:col-span-12 lg:row-span-7"
           >
             <div className="grid gap-8 px-8 sm:grid-cols-[repeat(2,1fr)]">
-              <div
-                className="flex flex-col
-              justify-center pt-12 text-center font-manrope text-4xl font-extrabold
-              -tracking-widest
-              2xs:text-5xl xs:text-7xl sm:py-6 sm:text-start"
-              >
+              <div className="flex flex-col justify-center pt-12 text-center font-manrope text-4xl font-extrabold -tracking-widest 2xs:text-5xl xs:text-7xl sm:py-6 sm:text-start">
                 <div>Unleash</div>
                 <div className="whitespace-nowrap text-cyan-500">
                   Your Screen&apos;s
@@ -75,11 +70,10 @@ const Home: FC = () => {
             </div>
           </FancyCard>
           <div
-            className="col-start-1
-          col-end-[17] row-start-[15] row-end-[16] flex
-          flex-col rounded-2xl bg-cyan-500 p-4 font-monda
-          sm:col-start-9 sm:col-end-[17] sm:row-start-[11] sm:row-end-[14]
-          lg:col-span-4 lg:row-span-4"
+            className="col-start-1 col-end-[17] row-start-[15] row-end-[16]
+            flex flex-col rounded-2xl bg-cyan-500 p-4 font-monda
+            sm:col-start-9 sm:col-end-[17] sm:row-start-[11] sm:row-end-[14]
+            lg:col-span-4 lg:row-span-4"
           >
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between">
@@ -102,8 +96,8 @@ const Home: FC = () => {
           </div>
           <FancyCard
             className="col-start-1 col-end-[17] row-start-8 row-end-[15]
-          sm:col-start-1 sm:col-end-[17] sm:row-start-6 sm:row-end-[11]
-          lg:col-span-12 lg:row-span-9"
+            sm:col-start-1 sm:col-end-[17] sm:row-start-6 sm:row-end-[11]
+            lg:col-span-12 lg:row-span-9"
           >
             <div className="grid grid-cols-[repeat(1,1fr)] gap-8 py-8 sm:grid-cols-[repeat(2,1fr)]">
               <div className="order-2 flex flex-col justify-between gap-8 pl-8 sm:order-1">
@@ -124,11 +118,11 @@ const Home: FC = () => {
             </div>
           </FancyCard>
           <div
-            className="sticky bottom-8 z-10 col-start-9
-          col-end-[17] row-start-[16] row-end-[17] flex
-          flex-col rounded-2xl bg-rose-600 p-4 font-monda
-          sm:static sm:col-start-9 sm:col-end-13 sm:row-start-[14] sm:row-end-[17]
-          lg:col-span-2 lg:row-span-5"
+            className="sticky bottom-8 z-10
+            col-start-9 col-end-[17] row-start-[16] row-end-[17]
+            flex flex-col rounded-2xl bg-rose-600 p-4 font-monda
+            sm:static sm:col-start-9 sm:col-end-13 sm:row-start-[14] sm:row-end-[17]
+            lg:col-span-2 lg:row-span-5"
           >
             <LinkIcon className="mb-2" />
             <div className="text-sm">Do you have any question?</div>
@@ -136,11 +130,11 @@ const Home: FC = () => {
             <div className="text-2xl font-bold">Contact Us</div>
           </div>
           <div
-            className="sticky bottom-8 z-10 col-start-1
-          col-end-9 row-start-[16] row-end-[17] flex
-          flex-col rounded-2xl bg-rose-600 p-4 font-monda
-          sm:static sm:col-start-13 sm:col-end-[17] sm:row-start-[14] sm:row-end-[17]
-          lg:col-span-2 lg:row-span-5"
+            className="sticky bottom-8 z-10
+            col-start-1 col-end-9 row-start-[16] row-end-[17]
+            flex flex-col rounded-2xl bg-rose-600 p-4 font-monda
+            sm:static sm:col-start-13 sm:col-end-[17] sm:row-start-[14] sm:row-end-[17]
+            lg:col-span-2 lg:row-span-5"
           >
             <LinkIcon className="mb-2" />
             <div className="text-sm">recover our history</div>
