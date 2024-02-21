@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
+        id="home"
         className={`${inter.variable} ${rubik.variable} ${manrope.variable} ${monda.variable} flex flex-col items-center bg-zinc-950 font-inter text-white`}
       >
         {children}
