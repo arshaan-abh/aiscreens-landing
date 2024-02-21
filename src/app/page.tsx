@@ -24,6 +24,7 @@ import Testimonial from "@/components/testimonial";
 import Footer from "@/components/footer";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import ButtonBase from "@mui/material/ButtonBase";
 
 const slides = [
   {
@@ -75,16 +76,28 @@ const Home: FC = () => {
     <Sheet>
       <div className="sticky top-0 z-20 flex w-main max-w-full items-center justify-between bg-gradient-to-b from-zinc-950 to-transparent p-8">
         <Logo />
-        <div className="hidden gap-8 font-rubik text-sm sm:flex">
-          <a href="#home">Home</a>
-          <a href="#testimonial">Testimonial</a>
-          <a href="#footer">Contact Us</a>
+        <div className="hidden gap-2 font-rubik text-sm sm:flex">
+          <a href="#home">
+            <ButtonBase className="rounded-full px-4 py-2">Home</ButtonBase>
+          </a>
+          <a href="#testimonial">
+            <ButtonBase className="rounded-full px-4 py-2">
+              Testimonial
+            </ButtonBase>
+          </a>
+          <a href="#footer">
+            <ButtonBase className="rounded-full px-4 py-2">
+              Contact Us
+            </ButtonBase>
+          </a>
         </div>
         <a
           href="https://aiscreens.selectedstartups.com/"
-          className="hidden rounded-full bg-cyan-500 px-4 py-2 text-xs font-medium sm:flex"
+          className="hidden sm:flex"
         >
-          Sign In
+          <ButtonBase className="rounded-full bg-cyan-500 px-4 py-2 text-xs font-medium">
+            Sign In
+          </ButtonBase>
         </a>
         <SheetTrigger className="sm:hidden">
           <Menu />
@@ -102,9 +115,9 @@ const Home: FC = () => {
               few clicks away. Our user-friendly product is designed to ensure
               your success.
             </div>
-            <button className="rounded-lg bg-cyan-500 px-16 py-2 font-medium">
+            <ButtonBase className="rounded-lg bg-cyan-500 px-16 py-2 font-medium">
               Start
-            </button>
+            </ButtonBase>
           </div>
         </FancyCard>
         <FancyCard
@@ -132,28 +145,30 @@ const Home: FC = () => {
         <a
           href="#testimonial"
           className="col-start-1 col-end-[17] row-start-[14] row-end-[16]
-            flex flex-col rounded-2xl bg-cyan-500 p-4 font-monda
+            grid
             sm:col-start-9 sm:col-end-[17] sm:row-start-[11] sm:row-end-[14]
             lg:col-span-4 lg:row-span-4"
         >
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between">
-              <div className="text-2xl font-bold">Testimonial</div>
-              <LinkIcon />
+          <ButtonBase className="flex flex-col items-stretch rounded-2xl bg-cyan-500 p-4 text-start font-monda">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <div className="text-2xl font-bold">Testimonial</div>
+                <LinkIcon />
+              </div>
+              <div className="text-sm">Recover our history</div>
             </div>
-            <div className="text-sm">Recover our history</div>
-          </div>
-          <div className="min-h-2 grow" />
-          <div className="flex items-center gap-2 text-sm text-zinc-950">
-            <AvatarGroup
-              avatars={[
-                <UserIcon key={0} className="text-white" />,
-                <UserIcon key={1} className="text-white" />,
-                <UserIcon key={2} className="text-white" />,
-              ]}
-            />
-            Recover our history
-          </div>
+            <div className="min-h-2 grow" />
+            <div className="flex items-center gap-2 text-sm text-zinc-950">
+              <AvatarGroup
+                avatars={[
+                  <UserIcon key={0} className="text-white" />,
+                  <UserIcon key={1} className="text-white" />,
+                  <UserIcon key={2} className="text-white" />,
+                ]}
+              />
+              Recover our history
+            </div>
+          </ButtonBase>
         </a>
         <FancyCard
           className="col-start-1 col-end-[17] row-start-[8] row-end-[14]
@@ -192,31 +207,35 @@ const Home: FC = () => {
           href="#footer"
           className="sticky bottom-8 z-10
             col-start-9 col-end-[17] row-start-[16] row-end-[17]
-            flex flex-col rounded-2xl bg-rose-600 p-4 font-monda
+            grid
             sm:static sm:col-start-9 sm:col-end-13 sm:row-start-[14] sm:row-end-[17]
             lg:col-span-2 lg:row-span-5"
         >
-          <LinkIcon className="mb-2" />
-          <div className="hidden text-sm capitalize sm:flex">
-            Craft professional screen experiences with us.
-          </div>
-          <div className="grow sm:min-h-2" />
-          <div className="text-lg font-bold">Contact Us</div>
+          <ButtonBase className="flex flex-col items-stretch rounded-2xl bg-rose-600 p-4 text-start font-monda">
+            <LinkIcon className="mb-2" />
+            <div className="hidden text-sm capitalize sm:flex">
+              Craft professional screen experiences with us.
+            </div>
+            <div className="grow sm:min-h-2" />
+            <div className="text-lg font-bold">Contact Us</div>
+          </ButtonBase>
         </a>
         <a
           href="#footer"
           className="sticky bottom-8 z-10
             col-start-1 col-end-9 row-start-[16] row-end-[17]
-            flex flex-col rounded-2xl bg-rose-600 p-4 font-monda
+            grid
             sm:static sm:col-start-13 sm:col-end-[17] sm:row-start-[14] sm:row-end-[17]
             lg:col-span-2 lg:row-span-5"
         >
-          <LinkIcon className="mb-2" />
-          <div className="hidden text-sm capitalize sm:flex">
-            We&#39;re reshaping the future of screen marketing.
-          </div>
-          <div className="grow sm:min-h-2" />
-          <div className="text-lg font-bold">About Us</div>
+          <ButtonBase className="flex flex-col items-stretch rounded-2xl bg-rose-600 p-4 text-start font-monda">
+            <LinkIcon className="mb-2" />
+            <div className="hidden text-sm capitalize sm:flex">
+              We&#39;re reshaping the future of screen marketing.
+            </div>
+            <div className="grow sm:min-h-2" />
+            <div className="text-lg font-bold">About Us</div>
+          </ButtonBase>
         </a>
       </div>
       <div className="pointer-events-none fixed inset-0 top-auto h-96 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
