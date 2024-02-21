@@ -56,4 +56,6 @@ const Illumination: FC<IlluminationProps> = ({
 
 export default Illumination;
 
-// TODO set the css custom properties only once
+// TODO list:
+// 1. set the css custom properties only once
+// 2. use tailwind-easing-gradients instead
