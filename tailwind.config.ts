@@ -43,7 +43,20 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-var-requires
+    require("tailwind-easing-gradients")({
+      type: "radial",
+      easing: "ease-in-out",
+      directions: {
+        radial: "512px circle at var(--illumination-x) var(--illumination-y)",
+      },
+      gradients: {
+        illumination: ["#FFFFFF40", "transparent"],
+      },
+    }),
+  ],
 };
 
 export default config;
