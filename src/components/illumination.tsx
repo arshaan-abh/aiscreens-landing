@@ -1,3 +1,4 @@
+"use client";
 import { type FC, useCallback, useEffect } from "react";
 import HTMLProps from "@/interfaces/html-props";
 
