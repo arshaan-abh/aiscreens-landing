@@ -73,20 +73,29 @@ const slides = [
 const Home: FC = () => {
   return (
     <Sheet>
-      <div className="sticky top-0 z-20 flex w-main max-w-full items-center justify-between bg-gradient-to-b from-zinc-950 to-transparent p-8">
+      <div className="sticky top-0 z-20 flex w-main max-w-full items-center gap-8 bg-gradient-to-b from-zinc-950 to-transparent p-12">
         <Logo />
-        <div className="hidden gap-8 text-sm sm:flex">
-          <a href="#home">Home</a>
-          <a href="#testimonial">Testimonial</a>
-          <a href="#footer">Contact Us</a>
+        <div className="hidden gap-4 text-sm sm:flex">
+          <a
+            className="rounded-2xl border border-white px-4 py-2 font-bold"
+            href="#home"
+          >
+            Home
+          </a>
+          <a className="rounded-2xl px-4 py-2" href="#testimonial">
+            Testimonial
+          </a>
+          <a className="rounded-2xl px-4 py-2" href="#footer">
+            Contact Us
+          </a>
         </div>
         <a
           href="https://aiscreens.selectedstartups.com/"
-          className="hidden rounded-full bg-cyan-500 px-4 py-2 text-xs font-medium sm:flex"
+          className="ml-auto hidden rounded-2xl bg-cyan-500 px-4 py-2 text-sm font-bold sm:flex"
         >
           Sign In
         </a>
-        <SheetTrigger className="sm:hidden">
+        <SheetTrigger className="ml-auto sm:hidden">
           <Menu />
         </SheetTrigger>
       </div>
