@@ -55,7 +55,7 @@ const Testimonial: FC = () => {
                   <Image src={slide.image} alt="..." />
                 </div>
                 <div className="order-1 col-span-2 flex flex-col justify-around gap-4 p-8 pb-0 sm:order-2 sm:pb-8 sm:pl-0">
-                  <div className="flex flex-col gap-2 font-monda">
+                  <div className="flex flex-col gap-2">
                     <div className="text-3xl font-bold">{slide.title}</div>
                     <div className="text-2xl font-normal">
                       {slide.description}

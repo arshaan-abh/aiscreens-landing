@@ -75,7 +75,7 @@ const Home: FC = () => {
     <Sheet>
       <div className="sticky top-0 z-20 flex w-main max-w-full items-center justify-between bg-gradient-to-b from-zinc-950 to-transparent p-8">
         <Logo />
-        <div className="hidden gap-8 font-rubik text-sm sm:flex">
+        <div className="hidden gap-8 text-sm sm:flex">
           <a href="#home">Home</a>
           <a href="#testimonial">Testimonial</a>
           <a href="#footer">Contact Us</a>
@@ -97,8 +97,8 @@ const Home: FC = () => {
             lg:col-span-4 lg:row-span-7"
         >
           <div className="flex flex-col items-center justify-end gap-4 p-8">
-            <div className="flex grow items-center text-center font-monda text-lg">
-              Take the next step with confidence – smart campaigns are just a
+            <div className="flex grow items-center text-center text-lg">
+              Take the next step with confidence - smart campaigns are just a
               few clicks away. Our user-friendly product is designed to ensure
               your success.
             </div>
@@ -121,7 +121,7 @@ const Home: FC = () => {
               <div className="sm:text-end">Untapped</div>
               <div className="sm:text-end">Potential</div>
             </div>
-            <div className="flex items-end pb-12 text-center font-monda text-xl sm:py-8 sm:text-start">
+            <div className="flex items-end pb-12 text-center text-xl sm:py-8 sm:text-start">
               Welcome to AiScreens,where the art of screen marketing meets
               limitless possibilities. Direct your brand&#39;s story by
               orchestrating visually stunning imagery, compelling videos, and
@@ -132,7 +132,7 @@ const Home: FC = () => {
         <a
           href="#testimonial"
           className="col-start-1 col-end-[17] row-start-[14] row-end-[16]
-            flex flex-col rounded-2xl bg-cyan-500 p-4 font-monda
+            flex flex-col rounded-2xl bg-cyan-500 p-4
             sm:col-start-9 sm:col-end-[17] sm:row-start-[11] sm:row-end-[14]
             lg:col-span-4 lg:row-span-4"
         >
@@ -175,10 +175,8 @@ const Home: FC = () => {
                   key={index}
                 >
                   <div className="order-2 mr-8 flex flex-col justify-end gap-4 pl-8 sm:order-1 sm:mr-0 sm:justify-between sm:gap-8">
-                    <div className="font-monda text-2xl font-bold">
-                      {slide.title}
-                    </div>
-                    <div className="font-monda text-lg">{slide.content}</div>
+                    <div className="text-2xl font-bold">{slide.title}</div>
+                    <div className="text-lg">{slide.content}</div>
                   </div>
                   <div className="order-1 ml-8 flex items-center justify-end sm:order-2 sm:ml-0">
                     <Image src={slide.image} alt="Slide 1" />
@@ -192,7 +190,7 @@ const Home: FC = () => {
           href="#footer"
           className="sticky bottom-8 z-10
             col-start-9 col-end-[17] row-start-[16] row-end-[17]
-            flex flex-col rounded-2xl bg-rose-600 p-4 font-monda
+            flex flex-col rounded-2xl bg-rose-600 p-4
             sm:static sm:col-start-9 sm:col-end-13 sm:row-start-[14] sm:row-end-[17]
             lg:col-span-2 lg:row-span-5"
         >
@@ -207,7 +205,7 @@ const Home: FC = () => {
           href="#footer"
           className="sticky bottom-8 z-10
             col-start-1 col-end-9 row-start-[16] row-end-[17]
-            flex flex-col rounded-2xl bg-rose-600 p-4 font-monda
+            flex flex-col rounded-2xl bg-rose-600 p-4
             sm:static sm:col-start-13 sm:col-end-[17] sm:row-start-[14] sm:row-end-[17]
             lg:col-span-2 lg:row-span-5"
         >
