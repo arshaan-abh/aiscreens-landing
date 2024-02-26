@@ -73,7 +73,7 @@ const slides = [
 const Home: FC = () => {
   return (
     <Sheet>
-      <div className="sticky top-0 z-20 flex w-main max-w-full items-center gap-8 bg-gradient-to-b from-zinc-950 to-transparent p-12">
+      <div className="sticky top-0 z-20 flex w-main max-w-full items-center gap-12 bg-gradient-to-b from-zinc-950 to-transparent p-8">
         <Logo />
         <div className="hidden gap-4 text-sm sm:flex">
           <a
