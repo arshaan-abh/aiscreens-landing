@@ -101,8 +101,8 @@ const Home: FC = () => {
       </div>
       <div className="grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
         <FancyCard
-          className="col-start-1 col-end-[17] row-start-[6] row-end-[8]
-            sm:col-start-1 sm:col-end-9 sm:row-start-[11] sm:row-end-[17]
+          className="col-end-17 sm:row-end-17 col-start-1 row-start-6
+            row-end-8 sm:col-start-1 sm:col-end-9 sm:row-start-11
             lg:col-span-4 lg:row-span-7"
         >
           <div className="flex flex-col items-center justify-end gap-4 p-8">
@@ -117,8 +117,8 @@ const Home: FC = () => {
           </div>
         </FancyCard>
         <FancyCard
-          className="col-start-1 col-end-[17] row-start-1 row-end-6
-            sm:col-start-1 sm:col-end-[17] sm:row-start-1 sm:row-end-6
+          className="col-end-17 sm:col-end-17 col-start-1 row-start-1
+            row-end-6 sm:col-start-1 sm:row-start-1 sm:row-end-6
             lg:col-span-12 lg:row-span-7"
         >
           <div className="grid gap-8 px-8 sm:grid-cols-[repeat(2,1fr)]">
@@ -140,9 +140,9 @@ const Home: FC = () => {
         </FancyCard>
         <a
           href="#testimonial"
-          className="col-start-1 col-end-[17] row-start-[14] row-end-[16]
-            flex flex-col rounded-2xl bg-cyan-500 p-4
-            sm:col-start-9 sm:col-end-[17] sm:row-start-[11] sm:row-end-[14]
+          className="col-end-17 row-start-14 row-end-16 sm:col-end-17
+            sm:row-end-14 col-start-1 flex flex-col rounded-2xl
+            bg-cyan-500 p-4 sm:col-start-9 sm:row-start-11
             lg:col-span-4 lg:row-span-4"
         >
           <div className="flex flex-col gap-2">
@@ -165,8 +165,8 @@ const Home: FC = () => {
           </div>
         </a>
         <FancyCard
-          className="col-start-1 col-end-[17] row-start-[8] row-end-[14]
-            sm:col-start-1 sm:col-end-[17] sm:row-start-6 sm:row-end-[11]
+          className="col-end-17 row-end-14 sm:col-end-17 col-start-1
+            row-start-8 sm:col-start-1 sm:row-start-6 sm:row-end-11
             lg:col-span-12 lg:row-span-9"
         >
           <Carousel
@@ -197,10 +197,10 @@ const Home: FC = () => {
         </FancyCard>
         <a
           href="#footer"
-          className="sticky bottom-8 z-10
-            col-start-9 col-end-[17] row-start-[16] row-end-[17]
-            flex flex-col rounded-2xl bg-rose-600 p-4
-            sm:static sm:col-start-9 sm:col-end-13 sm:row-start-[14] sm:row-end-[17]
+          className="col-end-17 row-start-16 row-end-17
+            sm:row-start-14 sm:row-end-17 sticky bottom-8
+            z-10 col-start-9 flex flex-col rounded-2xl
+            bg-rose-600 p-4 sm:static sm:col-start-9 sm:col-end-13
             lg:col-span-2 lg:row-span-5"
         >
           <LinkIcon className="mb-2" />
@@ -212,10 +212,10 @@ const Home: FC = () => {
         </a>
         <a
           href="#footer"
-          className="sticky bottom-8 z-10
-            col-start-1 col-end-9 row-start-[16] row-end-[17]
-            flex flex-col rounded-2xl bg-rose-600 p-4
-            sm:static sm:col-start-13 sm:col-end-[17] sm:row-start-[14] sm:row-end-[17]
+          className="row-start-16 row-end-17 sm:col-end-17
+            sm:row-start-14 sm:row-end-17 sticky bottom-8
+            z-10 col-start-1 col-end-9 flex flex-col
+            rounded-2xl bg-rose-600 p-4 sm:static sm:col-start-13
             lg:col-span-2 lg:row-span-5"
         >
           <LinkIcon className="mb-2" />
@@ -259,5 +259,4 @@ const Home: FC = () => {
 export default Home;
 
 // TODO list:
-// 1. organize grid class names
-// 2. use grid-rows-16 instead?
+// 1. use grid-rows-16 instead?

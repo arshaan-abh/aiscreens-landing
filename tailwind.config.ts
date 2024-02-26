@@ -35,6 +35,13 @@ const config: Config = {
       width: {
         main: "80rem",
       },
+      gridColumnStart: {
+        13: "13",
+        14: "14",
+        15: "15",
+        16: "16",
+        17: "17",
+      },
       fontFamily: {
         inter: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         rubik: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
