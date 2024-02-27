@@ -48,8 +48,8 @@ const Home: FC = () => {
             sm:col-start-1 sm:col-end-17 sm:row-start-1 sm:row-end-6
             lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
         >
-          <div className="grid gap-8 px-8 sm:grid-cols-[repeat(2,1fr)]">
-            <div className="flex flex-col justify-end pt-12 text-center font-manrope text-4xl font-extrabold -tracking-widest 3xs:text-5xl 2xs:text-6xl xs:text-7xl sm:justify-center sm:py-6 sm:text-start">
+          <div className="flex flex-col justify-between gap-y-6 px-8 py-6">
+            <div className="flex flex-col text-center text-4xl font-extrabold -tracking-widest 3xs:text-5xl 2xs:text-6xl xs:text-7xl sm:text-start">
               <div>Unleash</div>
               <div className="whitespace-nowrap text-cyan-500">
                 Your Screen&apos;s
@@ -57,11 +57,18 @@ const Home: FC = () => {
               <div className="sm:text-end">Untapped</div>
               <div className="sm:text-end">Potential</div>
             </div>
-            <div className="flex items-end pb-12 text-center text-xl sm:py-8 sm:text-start">
-              Welcome to AiScreens,where the art of screen marketing meets
-              limitless possibilities. Direct your brand&#39;s story by
-              orchestrating visually stunning imagery, compelling videos, and
-              persuasive text to showcase your services or products.
+            <div className="flex flex-col gap-6">
+              <div className="h-px bg-gradient-to-l from-cyan-300 to-cyan-950" />
+              <div className="text-center text-slate-300 sm:text-start">
+                Welcome to <span className="font-bold">AiScreens</span>, where
+                the art of screen marketing meets limitless possibilities.
+                Direct your brand&#39;s story by orchestrating visually stunning
+                imagery, compelling videos, and persuasive text to showcase your
+                services or products. With AiScreens, liberate yourself from the
+                constraints of time or location, manage your screen marketing
+                whenever, wherever, and embrace the liberty to craft
+                unforgettable experiences for your audience.
+              </div>
             </div>
           </div>
         </FancyCard>
