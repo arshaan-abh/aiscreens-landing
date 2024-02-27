@@ -49,7 +49,7 @@ const Testimonial: FC = () => {
               className={`grid pl-4 transition-all lg:basis-3/4`}
             >
               <div
-                className={`grid grid-cols-[repeat(2,1fr)] rounded-2xl bg-cyan-500 sm:grid-cols-[repeat(3,1fr)]`}
+                className={`grid grid-cols-[repeat(2,1fr)] rounded-2xl bg-primary-500 sm:grid-cols-[repeat(3,1fr)]`}
               >
                 <div className="order-2 col-span-2 flex items-end justify-center p-4 pb-0 sm:order-1 sm:col-span-1">
                   <Image src={slide.image} alt="..." />
