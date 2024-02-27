@@ -75,7 +75,7 @@ const Home: FC = () => {
         <a
           href="#testimonial"
           className="col-start-1 col-end-17 row-start-14 row-end-16
-            flex flex-col rounded-2xl bg-cyan-500 p-4
+            flex flex-col rounded-3xl bg-cyan-500 p-4
             sm:col-start-9 sm:col-end-17 sm:row-start-11 sm:row-end-14
             lg:col-start-8 lg:col-end-13 lg:row-start-12 lg:row-end-17"
         >
@@ -109,7 +109,7 @@ const Home: FC = () => {
           href="#footer"
           className="sticky bottom-8 z-10
             col-start-9 col-end-17 row-start-16 row-end-17
-            flex flex-col rounded-2xl bg-rose-600 p-4 sm:static
+            flex flex-col rounded-3xl bg-rose-600 p-4 sm:static
             sm:col-start-9 sm:col-end-13 sm:row-start-14 sm:row-end-17
             lg:col-start-15 lg:col-end-17 lg:row-start-12 lg:row-end-17"
         >
@@ -124,7 +124,7 @@ const Home: FC = () => {
           href="#footer"
           className="sticky bottom-8 z-10
             col-start-1 col-end-9 row-start-16 row-end-17
-            flex flex-col rounded-2xl bg-rose-600 p-4 sm:static
+            flex flex-col rounded-3xl bg-rose-600 p-4 sm:static
             sm:col-start-13 sm:col-end-17 sm:row-start-14 sm:row-end-17
             lg:col-start-13 lg:col-end-15 lg:row-start-12 lg:row-end-17"
         >

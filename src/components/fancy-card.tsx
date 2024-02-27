@@ -6,11 +6,12 @@ const FancyCard: FC<HTMLProps<HTMLDivElement>> = (props) => {
   const { className, refProp, children, ...otherProps } = props;
   return (
     <Illumination
-      className={`grid rounded-2xl bg-gradient-to-r from-cyan-300 to-cyan-950 p-px ${className}`}
+      className={`relative rounded-3xl bg-gradient-to-r from-gradient-from to-gradient-to ${className}`}
       ref={refProp}
       {...otherProps}
     >
-      <div className="grid rounded-[calc(1rem-1px)] bg-gradient-to-r from-zinc-950 to-teal-950">
+      <div className="absolute inset-px rounded-[calc(1.5rem-1px)] bg-secondary" />
+      <div className="absolute inset-px grid rounded-[calc(1.5rem-1px)] bg-gradient-to-l from-gradient-from/30 to-gradient-to/30">
         {children}
       </div>
     </Illumination>

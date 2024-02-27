@@ -63,6 +63,20 @@ const config: Config = {
         16: "16",
         17: "17",
       },
+      colors: {
+        gray: "#B8CCCB",
+        primary: {
+          300: "#053747",
+          400: "#10657A",
+          500: "#00A8C6",
+          600: "#00C6DE",
+          700: "#CDFEFF",
+          800: "#EBFFFE",
+        },
+        secondary: "#050505",
+        accent: "#FF0066",
+        gradient: { from: "#60F4FF", to: "#04393D" },
+      },
       fontFamily: {
         inter: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
         rubik: ["var(--font-rubik)", ...defaultTheme.fontFamily.sans],
