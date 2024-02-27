@@ -40,3 +40,5 @@ const Illumination: FC<IlluminationProps> = ({
 };
 
 export default Illumination;
+
+// TODO don't listen multiple times
