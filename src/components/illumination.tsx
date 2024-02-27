@@ -41,4 +41,6 @@ const Illumination: FC<IlluminationProps> = ({
 
 export default Illumination;
 
-// TODO don't listen multiple times
+// TODO list:
+// 1. don't listen multiple times
+// 2. disable on touch based devices (maybe using a different event type)
