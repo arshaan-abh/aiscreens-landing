@@ -12,7 +12,7 @@ const AvatarGroup: FC<AvatarGroupProps> = (props) => {
       {avatars.map((avatar, index) => {
         return (
           <div
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white bg-gray-900"
+            className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-full border-2 border-primary-500"
             style={{ marginLeft: index === 0 ? undefined : "-1.25rem" }}
             key={index}
           >

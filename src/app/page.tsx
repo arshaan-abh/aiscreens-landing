@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { LinkIcon, Logo, UserIcon } from "@/components/icons";
+import { LinkIcon, Logo } from "@/components/icons";
 import FancyCard from "@/components/fancy-card";
 import AvatarGroup from "@/components/avatar-group";
 import {
@@ -12,6 +12,10 @@ import {
 } from "@/components/sheet";
 import { Menu } from "lucide-react";
 import Features from "@/components/features";
+import Image from "next/image";
+import avatar1 from "/public/avatar-1.jpg";
+import avatar2 from "/public/avatar-2.jpg";
+import avatar3 from "/public/avatar-3.jpg";
 
 const Home: FC = () => {
   return (
@@ -75,27 +79,23 @@ const Home: FC = () => {
         <a
           href="#testimonial"
           className="col-start-1 col-end-17 row-start-14 row-end-16
-            flex flex-col rounded-3xl bg-primary-500 p-4
+            grid rounded-3xl bg-primary-500 p-4
             sm:col-start-9 sm:col-end-17 sm:row-start-11 sm:row-end-14
             lg:col-start-8 lg:col-end-13 lg:row-start-12 lg:row-end-17"
         >
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between">
-              <div className="text-2xl font-bold">Testimonial</div>
+          <div className="flex flex-col justify-between gap-2">
+            <div className="flex items-start justify-between">
+              <AvatarGroup
+                avatars={[
+                  <Image src={avatar1} alt="Avatar 1" key={0} />,
+                  <Image src={avatar2} alt="Avatar 2" key={1} />,
+                  <Image src={avatar3} alt="Avatar 3" key={2} />,
+                ]}
+              />
               <LinkIcon />
             </div>
             <div className="text-sm">Recover our history</div>
-          </div>
-          <div className="min-h-2 grow" />
-          <div className="flex items-center gap-2 text-sm text-zinc-950">
-            <AvatarGroup
-              avatars={[
-                <UserIcon key={0} className="text-white" />,
-                <UserIcon key={1} className="text-white" />,
-                <UserIcon key={2} className="text-white" />,
-              ]}
-            />
-            Recover our history
+            <div className="text-3xl font-extrabold">Testimonial</div>
           </div>
         </a>
         <FancyCard
