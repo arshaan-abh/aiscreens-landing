@@ -49,7 +49,7 @@ const Home: FC = () => {
             lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
         >
           <div className="flex flex-col justify-between gap-y-6 px-8 py-6">
-            <div className="flex flex-col text-center text-4xl font-extrabold -tracking-widest 3xs:text-5xl 2xs:text-6xl xs:text-7xl sm:text-start">
+            <div className="my-auto flex flex-col text-center text-4xl font-extrabold -tracking-widest 3xs:text-5xl 2xs:text-6xl xs:text-7xl sm:text-start">
               <div>Unleash</div>
               <div className="whitespace-nowrap text-primary-500">
                 Your Screen&apos;s
@@ -59,7 +59,7 @@ const Home: FC = () => {
             </div>
             <div className="flex flex-col gap-6">
               <div className="h-px bg-gradient-to-l from-gradient-from to-gradient-to" />
-              <div className="text-center text-slate-300 sm:text-start">
+              <div className="text-center text-gray sm:text-start">
                 Welcome to <span className="font-bold">AiScreens</span>, where
                 the art of screen marketing meets limitless possibilities.
                 Direct your brand&#39;s story by orchestrating visually stunning
