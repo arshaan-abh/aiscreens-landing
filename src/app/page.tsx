@@ -16,11 +16,15 @@ import Image from "next/image";
 import avatar1 from "/public/avatar-1.jpg";
 import avatar2 from "/public/avatar-2.jpg";
 import avatar3 from "/public/avatar-3.jpg";
+import {
+  ExpandableCard,
+  ExpandableCardsBoundary,
+} from "@/components/expandable-card";
 
 const Home: FC = () => {
   return (
     <Sheet>
-      <div className="sticky top-0 z-20 flex w-main max-w-full items-center gap-12 bg-gradient-to-b from-zinc-950 to-transparent p-8">
+      <div className="sticky top-0 z-30 flex w-main max-w-full items-center gap-12 bg-gradient-to-b from-zinc-950 to-transparent p-8">
         <Logo />
         <div className="hidden gap-4 text-sm sm:flex">
           <a
@@ -46,7 +50,7 @@ const Home: FC = () => {
           <Menu />
         </SheetTrigger>
       </div>
-      <div className="grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
+      <ExpandableCardsBoundary className="grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
         <FancyCard
           className="col-start-1 col-end-17 row-start-1 row-end-6
             sm:col-start-1 sm:col-end-17 sm:row-start-1 sm:row-end-6
@@ -79,24 +83,31 @@ const Home: FC = () => {
         <a
           href="#testimonial"
           className="col-start-1 col-end-17 row-start-14 row-end-16
-            grid rounded-3xl bg-primary-500 p-4
+            grid overflow-hidden rounded-3xl
             sm:col-start-9 sm:col-end-17 sm:row-start-11 sm:row-end-14
             lg:col-start-8 lg:col-end-13 lg:row-start-12 lg:row-end-17"
         >
-          <div className="flex flex-col justify-between gap-2">
-            <div className="flex items-start justify-between">
-              <AvatarGroup
-                avatars={[
-                  <Image src={avatar1} alt="Avatar 1" key={0} />,
-                  <Image src={avatar2} alt="Avatar 2" key={1} />,
-                  <Image src={avatar3} alt="Avatar 3" key={2} />,
-                ]}
-              />
-              <LinkIcon />
+          <ExpandableCard
+            className="z-20 grid rounded-3xl bg-primary-500 p-4 [--mx:2rem]
+              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:shadow-border-2 data-[is-expanded=true]:shadow-secondary data-[is-expanded=true]:backdrop-blur-2xl"
+            extra={<div />}
+          >
+            {/* TODO the gap must be equal to expandable card's padding */}
+            <div className="flex flex-col justify-between gap-4">
+              <div className="flex items-start justify-between">
+                <AvatarGroup
+                  avatars={[
+                    <Image src={avatar1} alt="Avatar 1" key={0} />,
+                    <Image src={avatar2} alt="Avatar 2" key={1} />,
+                    <Image src={avatar3} alt="Avatar 3" key={2} />,
+                  ]}
+                />
+                <LinkIcon />
+              </div>
+              <div className="text-sm">Recover our history</div>
+              <div className="text-3xl font-extrabold">Testimonial</div>
             </div>
-            <div className="text-sm">Recover our history</div>
-            <div className="text-3xl font-extrabold">Testimonial</div>
-          </div>
+          </ExpandableCard>
         </a>
         <FancyCard
           className="col-start-1 col-end-17 row-start-8 row-end-14
@@ -135,7 +146,7 @@ const Home: FC = () => {
           <div className="grow sm:min-h-2" />
           <div className="text-lg font-bold">About Us</div>
         </a>
-      </div>
+      </ExpandableCardsBoundary>
       <div className="pointer-events-none fixed inset-0 top-auto h-96 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
       <SheetContent className="border-teal-900 bg-teal-950">
         <SheetHeader>
