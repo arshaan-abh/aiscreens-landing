@@ -53,7 +53,7 @@ const Home: FC = () => {
           <Menu />
         </SheetTrigger>
       </div>
-      <ExpandableCardsBoundary className="grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
+      <div className="grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
         <FancyCard
           className="col-start-1 col-end-17 row-start-1 row-end-6
             sm:col-start-1 sm:col-end-17 sm:row-start-1 sm:row-end-6
@@ -85,96 +85,101 @@ const Home: FC = () => {
             </div>
           </div>
         </FancyCard>
-        <a
-          className="col-start-1 col-end-17 row-start-14 row-end-16
+        <ExpandableCardsBoundary
+          className="grid grid-cols-[repeat(9,1fr)] grid-rows-[repeat(16,1fr)] gap-4
+            lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-17"
+        >
+          <a
+            className="col-start-1 col-end-17 row-start-14 row-end-16
             grid overflow-hidden rounded-3xl
             sm:col-start-9 sm:col-end-17 sm:row-start-11 sm:row-end-14
-            lg:col-start-8 lg:col-end-11 lg:row-start-12 lg:row-end-17"
-        >
-          <ExpandableCard
-            className="grid rounded-3xl bg-primary-500 p-4 shadow-border-2 shadow-secondary [--mx:2rem]
-              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl"
-            extra={<div />}
+            lg:col-start-1 lg:col-end-4 lg:row-start-12 lg:row-end-17"
           >
-            {/* TODO the gap must be equal to expandable card's padding */}
-            <div className="flex flex-col justify-between gap-4">
-              <div className="flex items-start justify-between gap-4">
-                <AvatarGroup
-                  avatars={[
-                    <Image src={avatar1} alt="Avatar 1" key={0} />,
-                    <Image src={avatar2} alt="Avatar 2" key={1} />,
-                    <Image src={avatar3} alt="Avatar 3" key={2} />,
-                  ]}
-                />
-                <LinkIcon />
+            <ExpandableCard
+              className="grid rounded-3xl bg-primary-500 p-4 shadow-border-2 shadow-secondary
+              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl"
+              extra={<div />}
+            >
+              {/* TODO the gap must be equal to expandable card's padding */}
+              <div className="flex flex-col justify-between gap-4">
+                <div className="flex items-start justify-between gap-4">
+                  <AvatarGroup
+                    avatars={[
+                      <Image src={avatar1} alt="Avatar 1" key={0} />,
+                      <Image src={avatar2} alt="Avatar 2" key={1} />,
+                      <Image src={avatar3} alt="Avatar 3" key={2} />,
+                    ]}
+                  />
+                  <LinkIcon />
+                </div>
+                <div className="text-sm">Recover our history</div>
+                <div className="text-3xl font-extrabold tracking-tighter">
+                  Testimonial
+                </div>
               </div>
-              <div className="text-sm">Recover our history</div>
-              <div className="text-3xl font-extrabold tracking-tighter">
-                Testimonial
-              </div>
-            </div>
-          </ExpandableCard>
-        </a>
-        <FancyCard
-          className="col-start-1 col-end-17 row-start-8 row-end-14
+            </ExpandableCard>
+          </a>
+          <FancyCard
+            className="col-start-1 col-end-17 row-start-8 row-end-14
             sm:col-start-1 sm:col-end-17 sm:row-start-6 sm:row-end-11
-            lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-12"
-        >
-          <Features />
-        </FancyCard>
-        <a
-          className="sticky bottom-8
+            lg:col-start-1 lg:col-end-10 lg:row-start-1 lg:row-end-12"
+          >
+            <Features />
+          </FancyCard>
+          <a
+            className="sticky bottom-8
             col-start-9 col-end-17 row-start-16 row-end-17
             grid overflow-hidden rounded-3xl sm:static
             sm:col-start-9 sm:col-end-13 sm:row-start-14 sm:row-end-17
-            lg:col-start-14 lg:col-end-17 lg:row-start-12 lg:row-end-17"
-        >
-          <ExpandableCard
-            className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary [--mx:2rem]
-              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl"
-            extra={<div />}
+            lg:col-start-4 lg:col-end-7 lg:row-start-12 lg:row-end-17"
           >
-            <div className="flex flex-col gap-4">
-              <div className="flex items-start justify-between gap-4">
-                <div className="hidden text-sm capitalize sm:flex">
-                  Craft professional screen experiences with us.
+            <ExpandableCard
+              className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary
+              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl"
+              extra={<div />}
+            >
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="hidden text-sm capitalize sm:flex">
+                    Craft professional screen experiences with us.
+                  </div>
+                  <LinkIcon className="shrink-0" />
                 </div>
-                <LinkIcon className="shrink-0" />
+                <div className="grow sm:min-h-4" />
+                <div className="text-3xl font-extrabold tracking-tighter">
+                  Contact Us
+                </div>
               </div>
-              <div className="grow sm:min-h-4" />
-              <div className="text-3xl font-extrabold tracking-tighter">
-                Contact Us
-              </div>
-            </div>
-          </ExpandableCard>
-        </a>
-        <a
-          className="sticky bottom-8
+            </ExpandableCard>
+          </a>
+          <a
+            className="sticky bottom-8
             col-start-1 col-end-9 row-start-16 row-end-17
             grid overflow-hidden rounded-3xl sm:static
             sm:col-start-13 sm:col-end-17 sm:row-start-14 sm:row-end-17
-            lg:col-start-11 lg:col-end-14 lg:row-start-12 lg:row-end-17"
-        >
-          <ExpandableCard
-            className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary [--mx:2rem]
-              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl"
-            extra={<div />}
+            lg:col-start-7 lg:col-end-10 lg:row-start-12 lg:row-end-17"
           >
-            <div className="flex flex-col gap-4">
-              <div className="flex items-start justify-between gap-4">
-                <div className="hidden text-sm capitalize sm:flex">
-                  We&#39;re reshaping the future of screen marketing.
+            <ExpandableCard
+              className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary
+              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl"
+              extra={<div />}
+            >
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="hidden text-sm capitalize sm:flex">
+                    We&#39;re reshaping the future of screen marketing.
+                  </div>
+                  <LinkIcon className="shrink-0" />
                 </div>
-                <LinkIcon className="shrink-0" />
+                <div className="grow sm:min-h-4" />
+                <div className="text-3xl font-extrabold tracking-tighter">
+                  About Us
+                </div>
               </div>
-              <div className="grow sm:min-h-4" />
-              <div className="text-3xl font-extrabold tracking-tighter">
-                About Us
-              </div>
-            </div>
-          </ExpandableCard>
-        </a>
-      </ExpandableCardsBoundary>
+            </ExpandableCard>
+          </a>
+        </ExpandableCardsBoundary>
+      </div>
       <div className="pointer-events-none fixed inset-0 top-auto h-96 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
       <SheetContent className="border-teal-900 bg-teal-950">
         <SheetHeader>
