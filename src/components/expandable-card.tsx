@@ -124,7 +124,9 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
         className={c(
           `absolute overflow-hidden transition-all duration-1000 
           data-[is-expanded=false]:pointer-events-none data-[is-expanded=false]:invisible
-          data-[is-expanded=true]:!inset-x-[calc(var(--mx,0rem)+1px)] data-[is-expanded=true]:!inset-y-px data-[is-expanded=true]:!h-[calc(100%-2px)] data-[is-expanded=true]:!w-[calc(100%-var(--mx,0rem)*2-2px)]`,
+          data-[is-expanded=true]:!inset-x-[calc(var(--mx,0rem)+1px)] data-[is-expanded=true]:!inset-y-px
+          data-[is-expanded=false]:z-10 data-[is-expanded=true]:z-20
+          data-[is-expanded=true]:!h-[calc(100%-2px)] data-[is-expanded=true]:!w-[calc(100%-var(--mx,0rem)*2-2px)]`,
           className,
         )}
         {...otherProps}
@@ -154,3 +156,4 @@ export { ExpandableCardsBoundary, ExpandableCard };
 // 1. dynamic 2.25rem
 // 2. dynamic one pixel
 // 3. dynamic transition
+// 4. optimize and reformat

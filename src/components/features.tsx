@@ -73,7 +73,9 @@ const Features: FC = () => {
             key={index}
           >
             <div className="order-2 mr-8 flex flex-col justify-end gap-4 pl-8 sm:order-1 sm:mr-0 sm:justify-between sm:gap-8">
-              <div className="text-2xl font-bold">{slide.title}</div>
+              <div className="text-2xl font-bold tracking-tighter">
+                {slide.title}
+              </div>
               <div className="text-lg">{slide.content}</div>
             </div>
             <div className="order-1 ml-8 flex items-center justify-end sm:order-2 sm:ml-0">

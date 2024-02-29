@@ -28,21 +28,24 @@ const Home: FC = () => {
         <Logo />
         <div className="hidden gap-4 text-sm sm:flex">
           <a
-            className="rounded-2xl border border-white px-4 py-2 font-bold"
+            className="rounded-2xl border border-white px-4 py-2 font-bold tracking-tight"
             href="#home"
           >
             Home
           </a>
-          <a className="rounded-2xl px-4 py-2" href="#testimonial">
+          <a
+            className="rounded-2xl px-4 py-2 tracking-tight"
+            href="#testimonial"
+          >
             Testimonial
           </a>
-          <a className="rounded-2xl px-4 py-2" href="#footer">
+          <a className="rounded-2xl px-4 py-2 tracking-tight" href="#footer">
             Contact Us
           </a>
         </div>
         <a
           href="https://aiscreens.selectedstartups.com/"
-          className="ml-auto hidden rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold sm:flex"
+          className="ml-auto hidden rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold tracking-tight sm:flex"
         >
           Sign In
         </a>
@@ -81,20 +84,19 @@ const Home: FC = () => {
           </div>
         </FancyCard>
         <a
-          href="#testimonial"
           className="col-start-1 col-end-17 row-start-14 row-end-16
             grid overflow-hidden rounded-3xl
             sm:col-start-9 sm:col-end-17 sm:row-start-11 sm:row-end-14
-            lg:col-start-8 lg:col-end-13 lg:row-start-12 lg:row-end-17"
+            lg:col-start-8 lg:col-end-11 lg:row-start-12 lg:row-end-17"
         >
           <ExpandableCard
-            className="z-20 grid rounded-3xl bg-primary-500 p-4 [--mx:2rem]
-              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:shadow-border-2 data-[is-expanded=true]:shadow-secondary data-[is-expanded=true]:backdrop-blur-2xl"
+            className="grid rounded-3xl bg-primary-500 p-4 shadow-border-2 shadow-secondary [--mx:2rem]
+              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl"
             extra={<div />}
           >
             {/* TODO the gap must be equal to expandable card's padding */}
             <div className="flex flex-col justify-between gap-4">
-              <div className="flex items-start justify-between">
+              <div className="flex items-start justify-between gap-4">
                 <AvatarGroup
                   avatars={[
                     <Image src={avatar1} alt="Avatar 1" key={0} />,
@@ -105,7 +107,9 @@ const Home: FC = () => {
                 <LinkIcon />
               </div>
               <div className="text-sm">Recover our history</div>
-              <div className="text-3xl font-extrabold">Testimonial</div>
+              <div className="text-3xl font-extrabold tracking-tighter">
+                Testimonial
+              </div>
             </div>
           </ExpandableCard>
         </a>
@@ -117,34 +121,56 @@ const Home: FC = () => {
           <Features />
         </FancyCard>
         <a
-          href="#footer"
-          className="sticky bottom-8 z-10
+          className="sticky bottom-8
             col-start-9 col-end-17 row-start-16 row-end-17
-            flex flex-col rounded-3xl bg-rose-600 p-4 sm:static
+            grid overflow-hidden rounded-3xl sm:static
             sm:col-start-9 sm:col-end-13 sm:row-start-14 sm:row-end-17
-            lg:col-start-15 lg:col-end-17 lg:row-start-12 lg:row-end-17"
+            lg:col-start-14 lg:col-end-17 lg:row-start-12 lg:row-end-17"
         >
-          <LinkIcon className="mb-2" />
-          <div className="hidden text-sm capitalize sm:flex">
-            Craft professional screen experiences with us.
-          </div>
-          <div className="grow sm:min-h-2" />
-          <div className="text-lg font-bold">Contact Us</div>
+          <ExpandableCard
+            className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary [--mx:2rem]
+              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl"
+            extra={<div />}
+          >
+            <div className="flex flex-col gap-4">
+              <div className="flex items-start justify-between gap-4">
+                <div className="hidden text-sm capitalize sm:flex">
+                  Craft professional screen experiences with us.
+                </div>
+                <LinkIcon className="shrink-0" />
+              </div>
+              <div className="grow sm:min-h-4" />
+              <div className="text-3xl font-extrabold tracking-tighter">
+                Contact Us
+              </div>
+            </div>
+          </ExpandableCard>
         </a>
         <a
-          href="#footer"
-          className="sticky bottom-8 z-10
+          className="sticky bottom-8
             col-start-1 col-end-9 row-start-16 row-end-17
-            flex flex-col rounded-3xl bg-rose-600 p-4 sm:static
+            grid overflow-hidden rounded-3xl sm:static
             sm:col-start-13 sm:col-end-17 sm:row-start-14 sm:row-end-17
-            lg:col-start-13 lg:col-end-15 lg:row-start-12 lg:row-end-17"
+            lg:col-start-11 lg:col-end-14 lg:row-start-12 lg:row-end-17"
         >
-          <LinkIcon className="mb-2" />
-          <div className="hidden text-sm capitalize sm:flex">
-            We&#39;re reshaping the future of screen marketing.
-          </div>
-          <div className="grow sm:min-h-2" />
-          <div className="text-lg font-bold">About Us</div>
+          <ExpandableCard
+            className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary [--mx:2rem]
+              data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl"
+            extra={<div />}
+          >
+            <div className="flex flex-col gap-4">
+              <div className="flex items-start justify-between gap-4">
+                <div className="hidden text-sm capitalize sm:flex">
+                  We&#39;re reshaping the future of screen marketing.
+                </div>
+                <LinkIcon className="shrink-0" />
+              </div>
+              <div className="grow sm:min-h-4" />
+              <div className="text-3xl font-extrabold tracking-tighter">
+                About Us
+              </div>
+            </div>
+          </ExpandableCard>
         </a>
       </ExpandableCardsBoundary>
       <div className="pointer-events-none fixed inset-0 top-auto h-96 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />

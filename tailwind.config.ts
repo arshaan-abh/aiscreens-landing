@@ -64,6 +64,7 @@ const config: Config = {
         17: "17",
       },
       colors: {
+        rose: "#FF0066",
         gray: "#B8CCCB",
         primary: {
           300: "#053747",
