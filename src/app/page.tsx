@@ -20,6 +20,8 @@ import {
   ExpandableCard,
   ExpandableCardsBoundary,
 } from "@/components/expandable-card";
+import { textSlides } from "@/constants/text-slides";
+import TextSlide from "@/components/text-slider";
 
 const Home: FC = () => {
   return (
@@ -66,18 +68,11 @@ const Home: FC = () => {
             </div>
             <div className="flex flex-col gap-6">
               <div className="h-px bg-gradient-to-l from-gradient-from to-gradient-to" />
-              <div className="text-start text-gray">
-                Welcome to <span className="font-bold">AiScreens</span>, where
-                the art of screen marketing meets limitless possibilities.
-                Direct your brand&#39;s story by orchestrating visually stunning
-                imagery, compelling videos, and persuasive text to showcase your
-                services or products.
-                <br />
-                With AiScreens, liberate yourself from the constraints of time
-                or location, manage your screen marketing whenever, wherever,
-                and embrace the liberty to craft unforgettable experiences for
-                your audience.
+              <div className="hidden flex-col gap-4 xl:flex">
+                {textSlides[0]}
+                {textSlides[1]}
               </div>
+              <TextSlide className="block xl:hidden" />
             </div>
           </div>
         </FancyCard>
@@ -104,9 +99,11 @@ const Home: FC = () => {
                       <Image src={avatar3} alt="Avatar 3" key={2} />,
                     ]}
                   />
-                  <LinkIcon />
+                  <LinkIcon className="shrink-0" />
                 </div>
-                <div className="text-sm">Recover our history</div>
+                <div className="hidden text-sm xl:flex">
+                  Recover our history
+                </div>
                 <div className="text-3xl font-extrabold tracking-tighter">
                   Testimonial
                 </div>
@@ -127,14 +124,13 @@ const Home: FC = () => {
               extra={<div />}
             >
               <div className="flex flex-col gap-4">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex text-sm capitalize">
+                <div className="flex items-start gap-4">
+                  <div className="hidden text-sm capitalize xl:flex">
                     Craft professional screen experiences with us.
                   </div>
-                  <LinkIcon className="shrink-0" />
+                  <LinkIcon className="ml-auto shrink-0" />
                 </div>
-                <div className="min-h-4 grow" />
-                <div className="text-3xl font-extrabold tracking-tighter">
+                <div className="mt-auto text-3xl font-extrabold tracking-tighter">
                   Contact Us
                 </div>
               </div>
@@ -151,14 +147,13 @@ const Home: FC = () => {
               extra={<div />}
             >
               <div className="flex flex-col gap-4">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex text-sm capitalize">
+                <div className="flex items-start gap-4">
+                  <div className="hidden text-sm capitalize xl:flex">
                     We&#39;re reshaping the future of screen marketing.
                   </div>
-                  <LinkIcon className="shrink-0" />
+                  <LinkIcon className="ml-auto shrink-0" />
                 </div>
-                <div className="min-h-4 grow" />
-                <div className="text-3xl font-extrabold tracking-tighter">
+                <div className="mt-auto text-3xl font-extrabold tracking-tighter">
                   About Us
                 </div>
               </div>

@@ -73,14 +73,14 @@ const Features: FC = () => {
               <div className="text-3xl font-extrabold tracking-tighter">
                 {slide.title}
               </div>
-              <div className="grid h-full grid-cols-3 gap-8">
-                <div className="col-span-1 flex h-full flex-col items-start justify-between gap-8">
+              <div className="grid h-full grid-cols-6 gap-8">
+                <div className="col-span-3 flex h-full flex-col items-start justify-between gap-8 xl:col-span-2">
                   <div className="text-lg text-gray">{slide.content}</div>
                   <div className="rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold tracking-tight">
                     Explore Features
                   </div>
                 </div>
-                <div className="col-span-2 flex items-end justify-end">
+                <div className="col-span-3 flex items-end justify-end xl:col-span-4">
                   <Image src={slide.image} alt={`Slide ${index}`} />
                 </div>
               </div>
