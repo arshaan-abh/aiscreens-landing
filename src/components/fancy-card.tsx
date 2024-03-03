@@ -11,7 +11,7 @@ const FancyCard: FC<HTMLProps<HTMLDivElement>> = (props) => {
       {...otherProps}
     >
       <div className="absolute inset-px rounded-[calc(1.5rem-1px)] bg-secondary" />
-      <div className="relative grid rounded-[calc(1.5rem-1px)] bg-gradient-to-l from-gradient-from/30 to-gradient-to/30">
+      <div className="absolute inset-px grid rounded-[calc(1.5rem-1px)] bg-gradient-to-l from-gradient-from/30 to-gradient-to/30">
         {children}
       </div>
     </Illumination>

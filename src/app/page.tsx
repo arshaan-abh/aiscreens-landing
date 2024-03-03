@@ -53,24 +53,20 @@ const Home: FC = () => {
           <Menu />
         </SheetTrigger>
       </div>
-      <div className="grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
-        <FancyCard
-          className="col-start-1 col-end-17 row-start-1 row-end-6
-            sm:col-start-1 sm:col-end-17 sm:row-start-1 sm:row-end-6
-            lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
-        >
+      <div className="mb-8 grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
+        <FancyCard className="col-start-1 col-end-8 row-start-1 row-end-17">
           <div className="flex flex-col justify-between gap-y-6 px-8 py-6">
-            <div className="my-auto flex flex-col text-center text-4xl font-extrabold -tracking-widest 3xs:text-5xl 2xs:text-6xl xs:text-7xl sm:text-start">
+            <div className="my-auto flex flex-col text-start text-7xl font-extrabold -tracking-widest">
               <div>Unleash</div>
               <div className="whitespace-nowrap text-primary-500">
                 Your Screen&apos;s
               </div>
-              <div className="sm:text-end">Untapped</div>
-              <div className="sm:text-end">Potential</div>
+              <div className="text-end">Untapped</div>
+              <div className="text-end">Potential</div>
             </div>
             <div className="flex flex-col gap-6">
               <div className="h-px bg-gradient-to-l from-gradient-from to-gradient-to" />
-              <div className="text-center text-gray sm:text-start">
+              <div className="text-start text-gray">
                 Welcome to <span className="font-bold">AiScreens</span>, where
                 the art of screen marketing meets limitless possibilities.
                 Direct your brand&#39;s story by orchestrating visually stunning
@@ -86,14 +82,12 @@ const Home: FC = () => {
           </div>
         </FancyCard>
         <ExpandableCardsBoundary
-          className="grid grid-cols-[repeat(9,1fr)] grid-rows-[repeat(16,1fr)] gap-4
-            lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-17"
+          className="col-start-8 col-end-17 row-start-1 row-end-17
+            grid grid-cols-[repeat(9,1fr)] grid-rows-[repeat(16,1fr)] gap-4"
         >
           <a
-            className="col-start-1 col-end-17 row-start-14 row-end-16
-            grid overflow-hidden rounded-3xl
-            sm:col-start-9 sm:col-end-17 sm:row-start-11 sm:row-end-14
-            lg:col-start-1 lg:col-end-4 lg:row-start-12 lg:row-end-17"
+            className="col-start-1 col-end-4 row-start-12 row-end-17
+              grid overflow-hidden rounded-3xl"
           >
             <ExpandableCard
               className="grid rounded-3xl bg-primary-500 p-4 shadow-border-2 shadow-secondary
@@ -119,19 +113,13 @@ const Home: FC = () => {
               </div>
             </ExpandableCard>
           </a>
-          <FancyCard
-            className="col-start-1 col-end-17 row-start-8 row-end-14
-            sm:col-start-1 sm:col-end-17 sm:row-start-6 sm:row-end-11
-            lg:col-start-1 lg:col-end-10 lg:row-start-1 lg:row-end-12"
-          >
+          <FancyCard className="col-start-1 col-end-10 row-start-1 row-end-12">
             <Features />
           </FancyCard>
           <a
-            className="sticky bottom-8
-            col-start-9 col-end-17 row-start-16 row-end-17
-            grid overflow-hidden rounded-3xl sm:static
-            sm:col-start-9 sm:col-end-13 sm:row-start-14 sm:row-end-17
-            lg:col-start-4 lg:col-end-7 lg:row-start-12 lg:row-end-17"
+            className="static bottom-8
+              col-start-4 col-end-7 row-start-12 row-end-17
+              grid overflow-hidden rounded-3xl"
           >
             <ExpandableCard
               className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary
@@ -140,12 +128,12 @@ const Home: FC = () => {
             >
               <div className="flex flex-col gap-4">
                 <div className="flex items-start justify-between gap-4">
-                  <div className="hidden text-sm capitalize sm:flex">
+                  <div className="flex text-sm capitalize">
                     Craft professional screen experiences with us.
                   </div>
                   <LinkIcon className="shrink-0" />
                 </div>
-                <div className="grow sm:min-h-4" />
+                <div className="min-h-4 grow" />
                 <div className="text-3xl font-extrabold tracking-tighter">
                   Contact Us
                 </div>
@@ -153,11 +141,9 @@ const Home: FC = () => {
             </ExpandableCard>
           </a>
           <a
-            className="sticky bottom-8
-            col-start-1 col-end-9 row-start-16 row-end-17
-            grid overflow-hidden rounded-3xl sm:static
-            sm:col-start-13 sm:col-end-17 sm:row-start-14 sm:row-end-17
-            lg:col-start-7 lg:col-end-10 lg:row-start-12 lg:row-end-17"
+            className="static bottom-8
+              col-start-7 col-end-10 row-start-12 row-end-17
+              grid overflow-hidden rounded-3xl"
           >
             <ExpandableCard
               className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary
@@ -166,12 +152,12 @@ const Home: FC = () => {
             >
               <div className="flex flex-col gap-4">
                 <div className="flex items-start justify-between gap-4">
-                  <div className="hidden text-sm capitalize sm:flex">
+                  <div className="flex text-sm capitalize">
                     We&#39;re reshaping the future of screen marketing.
                   </div>
                   <LinkIcon className="shrink-0" />
                 </div>
-                <div className="grow sm:min-h-4" />
+                <div className="min-h-4 grow" />
                 <div className="text-3xl font-extrabold tracking-tighter">
                   About Us
                 </div>
@@ -180,7 +166,6 @@ const Home: FC = () => {
           </a>
         </ExpandableCardsBoundary>
       </div>
-      <div className="pointer-events-none fixed inset-0 top-auto h-96 bg-gradient-to-t from-zinc-950 to-transparent sm:hidden" />
       <SheetContent className="border-teal-900 bg-teal-950">
         <SheetHeader>
           <SheetTitle className="text-white">Menu</SheetTitle>
