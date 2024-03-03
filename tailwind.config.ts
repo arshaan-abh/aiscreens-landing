@@ -34,8 +34,8 @@ const config: Config = {
         "1.5xl": "1152px",
       },
       width: {
-        "main-smaller": "40rem",
-        main: "80rem",
+        "main-smaller": "640px",
+        main: "1280px",
       },
       gridRowStart: {
         13: "13",

@@ -27,8 +27,9 @@ const Home: FC = () => {
   return (
     <Sheet>
       <div className="sticky top-0 z-30 flex w-main max-w-full items-center gap-12 bg-gradient-to-b from-zinc-950 to-transparent p-8">
+        {/* TODO add backdrop */}
         <Logo />
-        <div className="hidden gap-4 text-sm sm:flex">
+        <div className="hidden gap-4 text-sm md:flex">
           <a
             className="rounded-2xl border border-white px-4 py-2 font-bold tracking-tight"
             href="#home"
@@ -47,18 +48,22 @@ const Home: FC = () => {
         </div>
         <a
           href="https://aiscreens.selectedstartups.com/"
-          className="ml-auto hidden rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold tracking-tight sm:flex"
+          className="ml-auto hidden rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold tracking-tight md:flex"
         >
           Sign In
         </a>
-        <SheetTrigger className="ml-auto sm:hidden">
+        <SheetTrigger className="ml-auto md:hidden">
           <Menu />
         </SheetTrigger>
       </div>
       <div className="mb-8 grid w-main-smaller max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8 lg:w-main">
-        <FancyCard className="col-start-1 col-end-8 row-start-1 row-end-17">
+        <FancyCard
+          className="col-start-1 col-end-17 row-start-1 row-end-8
+            grid
+            lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
+        >
           <div className="flex flex-col justify-between gap-y-6 px-8 py-6">
-            <div className="my-auto flex flex-col text-start text-7xl font-extrabold -tracking-widest lg:text-6xl 1.5xl:text-7xl">
+            <div className="my-auto flex flex-col text-start text-8xl font-extrabold -tracking-widest lg:text-6xl 1.5xl:text-7xl">
               <div>Unleash</div>
               <div className="whitespace-nowrap text-primary-500">
                 Your Screen&apos;s
@@ -77,12 +82,14 @@ const Home: FC = () => {
           </div>
         </FancyCard>
         <ExpandableCardsBoundary
-          className="col-start-8 col-end-17 row-start-1 row-end-17
-            grid grid-cols-[repeat(9,1fr)] grid-rows-[repeat(16,1fr)] gap-4"
+          className="col-start-1 col-end-17 row-start-8 row-end-17
+            grid grid-cols-[repeat(9,1fr)] grid-rows-[repeat(16,1fr)] gap-4
+            lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-17"
         >
           <a
-            className="col-start-1 col-end-4 row-start-12 row-end-17
-              grid overflow-hidden rounded-3xl"
+            className="col-start-1 col-end-13 row-start-13 row-end-17
+              grid overflow-hidden rounded-3xl
+              lg:col-start-1 lg:col-end-4 lg:row-start-12 lg:row-end-17"
           >
             <ExpandableCard
               className="grid rounded-3xl bg-primary-500 p-4 shadow-border-2 shadow-secondary
@@ -101,22 +108,26 @@ const Home: FC = () => {
                   />
                   <LinkIcon className="shrink-0" />
                 </div>
-                <div className="hidden text-sm xl:flex">
+                <div className="flex text-sm lg:hidden xl:flex">
                   Recover our history
                 </div>
-                <div className="text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
+                <div className="whitespace-nowrap text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
                   Testimonial
                 </div>
               </div>
             </ExpandableCard>
           </a>
-          <FancyCard className="col-start-1 col-end-10 row-start-1 row-end-12">
+          <FancyCard
+            className="col-start-1 col-end-13 row-start-1 row-end-9
+              lg:col-start-1 lg:col-end-10 lg:row-start-1 lg:row-end-12"
+          >
             <Features />
           </FancyCard>
           <a
             className="static bottom-8
-              col-start-4 col-end-7 row-start-12 row-end-17
-              grid overflow-hidden rounded-3xl"
+              col-start-6 col-end-13 row-start-9 row-end-13
+              grid overflow-hidden rounded-3xl
+              lg:col-start-4 lg:col-end-7 lg:row-start-12 lg:row-end-17"
           >
             <ExpandableCard
               className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary
@@ -125,12 +136,12 @@ const Home: FC = () => {
             >
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-4">
-                  <div className="hidden text-sm capitalize xl:flex">
+                  <div className="flex text-sm capitalize lg:hidden xl:flex">
                     Craft professional screen experiences with us.
                   </div>
                   <LinkIcon className="ml-auto shrink-0" />
                 </div>
-                <div className="mt-auto text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
+                <div className="mt-auto whitespace-nowrap text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
                   Contact Us
                 </div>
               </div>
@@ -138,8 +149,9 @@ const Home: FC = () => {
           </a>
           <a
             className="static bottom-8
-              col-start-7 col-end-10 row-start-12 row-end-17
-              grid overflow-hidden rounded-3xl"
+              col-start-1 col-end-6 row-start-9 row-end-13
+              grid overflow-hidden rounded-3xl
+              lg:col-start-7 lg:col-end-10 lg:row-start-12 lg:row-end-17"
           >
             <ExpandableCard
               className="grid rounded-3xl bg-rose p-4 text-secondary shadow-border-2 shadow-secondary
@@ -148,12 +160,12 @@ const Home: FC = () => {
             >
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-4">
-                  <div className="hidden text-sm capitalize xl:flex">
+                  <div className="flex text-sm capitalize lg:hidden xl:flex">
                     We&#39;re reshaping the future of screen marketing.
                   </div>
                   <LinkIcon className="ml-auto shrink-0" />
                 </div>
-                <div className="mt-auto text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
+                <div className="mt-auto whitespace-nowrap text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
                   About Us
                 </div>
               </div>
