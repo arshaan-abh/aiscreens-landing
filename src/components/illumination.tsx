@@ -44,3 +44,5 @@ export default Illumination;
 // TODO list:
 // 1. don't listen multiple times
 // 2. disable on touch based devices (maybe using a different event type)
+// 3. or add transition
+// 4. or detect touch move

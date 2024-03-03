@@ -12,7 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         id="home"
-        className={`${manrope.variable} flex flex-col items-center bg-secondary font-manrope text-white`}
+        className={`${manrope.variable} flex flex-col items-center bg-secondary font-manrope text-white selection:bg-secondary/50 selection:text-white`}
       >
         {children}
       </body>

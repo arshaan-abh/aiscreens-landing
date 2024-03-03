@@ -55,10 +55,10 @@ const Home: FC = () => {
           <Menu />
         </SheetTrigger>
       </div>
-      <div className="mb-8 grid w-main max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
+      <div className="mb-8 grid w-main-smaller max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8 lg:w-main">
         <FancyCard className="col-start-1 col-end-8 row-start-1 row-end-17">
           <div className="flex flex-col justify-between gap-y-6 px-8 py-6">
-            <div className="my-auto flex flex-col text-start text-7xl font-extrabold -tracking-widest">
+            <div className="my-auto flex flex-col text-start text-7xl font-extrabold -tracking-widest lg:text-6xl 1.5xl:text-7xl">
               <div>Unleash</div>
               <div className="whitespace-nowrap text-primary-500">
                 Your Screen&apos;s
@@ -104,7 +104,7 @@ const Home: FC = () => {
                 <div className="hidden text-sm xl:flex">
                   Recover our history
                 </div>
-                <div className="text-3xl font-extrabold tracking-tighter">
+                <div className="text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
                   Testimonial
                 </div>
               </div>
@@ -130,7 +130,7 @@ const Home: FC = () => {
                   </div>
                   <LinkIcon className="ml-auto shrink-0" />
                 </div>
-                <div className="mt-auto text-3xl font-extrabold tracking-tighter">
+                <div className="mt-auto text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
                   Contact Us
                 </div>
               </div>
@@ -153,7 +153,7 @@ const Home: FC = () => {
                   </div>
                   <LinkIcon className="ml-auto shrink-0" />
                 </div>
-                <div className="mt-auto text-3xl font-extrabold tracking-tighter">
+                <div className="mt-auto text-3xl font-extrabold tracking-tighter lg:text-2xl 1.5xl:text-3xl">
                   About Us
                 </div>
               </div>

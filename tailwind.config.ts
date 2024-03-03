@@ -31,8 +31,10 @@ const config: Config = {
         "3xs": "360px",
         "2xs": "400px",
         xs: "480px",
+        "1.5xl": "1152px",
       },
       width: {
+        "main-smaller": "40rem",
         main: "80rem",
       },
       gridRowStart: {
