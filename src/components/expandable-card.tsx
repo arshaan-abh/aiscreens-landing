@@ -157,3 +157,4 @@ export { ExpandableCardsBoundary, ExpandableCard };
 // 2. dynamic one pixel
 // 3. dynamic transition
 // 4. optimize and reformat
+// 5. add resize listener
