@@ -22,6 +22,7 @@ import {
 } from "@/components/expandable-card";
 import { textSlides } from "@/constants/text-slides";
 import TextSlide from "@/components/text-slider";
+import TitleSlider from "@/components/title-slider";
 
 const Home: FC = () => {
   return (
@@ -63,15 +64,8 @@ const Home: FC = () => {
             lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
         >
           <div className="flex flex-col justify-between gap-y-6 px-8 py-6">
-            <div className="my-auto flex flex-col text-start text-8xl font-extrabold -tracking-widest lg:text-6xl 1.5xl:text-7xl">
-              <div>Unleash</div>
-              <div className="whitespace-nowrap text-primary-500">
-                Your Screen&apos;s
-              </div>
-              <div className="text-end">Untapped</div>
-              <div className="text-end">Potential</div>
-            </div>
-            <div className="flex flex-col gap-6">
+            <TitleSlider />
+            <div className="hidden flex-col gap-6 sm:flex">
               <div className="h-px bg-gradient-to-l from-gradient-from to-gradient-to" />
               <div className="hidden flex-col gap-4 xl:flex">
                 {textSlides[0]}
