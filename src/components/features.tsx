@@ -69,18 +69,18 @@ const Features: FC = () => {
       <CarouselContent className="-ml-8 h-full">
         {slides.map((slide, index) => (
           <CarouselItem className="h-full pl-8" key={index}>
-            <div className="flex h-full flex-col gap-8 p-8">
-              <div className="text-3xl font-extrabold tracking-tighter">
+            <div className="flex h-full flex-row items-center gap-8 p-8 sm:flex-col sm:items-stretch">
+              <div className="w-1/3 text-3xl font-extrabold tracking-tighter sm:w-auto">
                 {slide.title}
               </div>
-              <div className="grid h-full grid-cols-6 gap-8">
-                <div className="col-span-3 flex h-full flex-col items-start justify-between gap-8 xl:col-span-2">
+              <div className="grid h-full w-2/3 grid-cols-6 gap-8 sm:w-auto">
+                <div className="col-span-3 hidden h-full flex-col items-start justify-between gap-8 sm:flex xl:col-span-2">
                   <div className="text-lg text-gray">{slide.content}</div>
                   <div className="rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold tracking-tight">
                     Explore Features
                   </div>
                 </div>
-                <div className="col-span-3 flex items-end justify-end xl:col-span-4">
+                <div className="col-span-6 flex items-center justify-center sm:col-span-3 sm:items-end sm:justify-end xl:col-span-4">
                   <Image src={slide.image} alt={`Slide ${index}`} />
                 </div>
               </div>
