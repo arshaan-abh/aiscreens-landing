@@ -134,14 +134,14 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
         <div
           data-is-expanded={isExpanded}
           className={`grid h-[calc(var(--h)-var(--p)*2)] w-[calc(var(--w)-var(--p)*2)] transition-all duration-1000
-            data-[is-expanded=true]:mt-[calc(var(--h)*-1+var(--p)*2+2.25rem)]`}
+            data-[is-expanded=true]:mt-[calc(var(--h)*-1+var(--p)*2+var(--lh,1lh))]`}
         >
           {children}
         </div>
         <div
           ref={shrinkerElement}
           className="mt-[--p] grid
-            h-[calc(var(--bb)-var(--bt)-var(--p)*3-2.25rem-2px)] w-[calc(var(--br)-var(--bl)-var(--p)*2-var(--mx,0rem)*2-2px)]"
+            h-[calc(var(--bb)-var(--bt)-var(--p)*3-var(--lh,1lh)-2px)] w-[calc(var(--br)-var(--bl)-var(--p)*2-var(--mx,0rem)*2-2px)]"
         >
           {extra}
         </div>
