@@ -141,3 +141,5 @@ const FeaturesPage: FC = () => {
 };
 
 export default FeaturesPage;
+
+// TODO check carousel component's transition detail
