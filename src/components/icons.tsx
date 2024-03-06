@@ -113,3 +113,43 @@ export const BurgerMenu: FC<IconProps> = (props) => {
     </svg>
   );
 };
+
+export const NextSlide: FC<IconProps> = (props) => {
+  const { refProp, ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="none"
+      ref={refProp}
+      {...otherProps}
+    >
+      <path
+        fill-rule="evenodd"
+        d="M2.908 27.092C4.982 29.167 8.321 29.167 15 29.167s10.017 0 12.092-2.075S29.166 21.678 29.166 15s0-10.017-2.075-12.092S21.678.833 15 .833 4.982.833 2.908 2.908.833 8.322.833 15s0 10.017 2.075 12.092zm9.216-7.091c-.415-.415-.415-1.088 0-1.503L15.622 15l-3.499-3.499c-.415-.415-.415-1.088 0-1.503s1.088-.415 1.503 0l4.25 4.25c.199.199.311.47.311.751s-.112.552-.311.751l-4.25 4.25c-.415.415-1.088.415-1.503 0z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
+
+export const PrevSlide: FC<IconProps> = (props) => {
+  const { refProp, ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="none"
+      ref={refProp}
+      {...otherProps}
+    >
+      <path
+        fill-rule="evenodd"
+        d="M27.092 2.908C25.017.833 21.678.833 15 .833S4.982.833 2.908 2.908.833 8.322.833 15s0 10.017 2.075 12.092S8.321 29.167 15 29.167s10.017 0 12.092-2.075S29.166 21.678 29.166 15s0-10.017-2.075-12.092zm-9.216 7.091c.415.415.415 1.088 0 1.503L14.377 15l3.499 3.499c.415.415.415 1.088 0 1.503s-1.088.415-1.503 0l-4.25-4.25a1.06 1.06 0 0 1 0-1.503l4.25-4.25c.415-.415 1.088-.415 1.503 0z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
