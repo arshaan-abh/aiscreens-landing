@@ -1,6 +1,7 @@
 "use client";
 import { type FC, useCallback, useEffect } from "react";
 import HTMLProps from "@/interfaces/html-props";
+import useSupportsTouch from "@/hooks/use-supports-touch";
 
 interface IlluminationProps extends HTMLProps<HTMLDivElement> {
   color?: string;
@@ -12,13 +13,24 @@ const Illumination: FC<IlluminationProps> = ({
   children,
   ...otherProps
 }) => {
-  const mouseMoveHandler = useCallback((event: MouseEvent) => {
-    const style = document.body.style;
-    if (style.getPropertyValue("--illumination-x") !== event.clientX + "px")
-      style.setProperty("--illumination-x", event.clientX + "px");
-    if (style.getPropertyValue("--illumination-y") !== event.clientY + "px")
-      style.setProperty("--illumination-y", event.clientY + "px");
-  }, []);
+  const isTouchBased = useSupportsTouch();
+
+  const mouseMoveHandler = useCallback(
+    (event: MouseEvent) => {
+      const style = document.body.style;
+      if (
+        style.getPropertyValue("--illumination-x") !== event.clientX + "px" &&
+        !isTouchBased
+      )
+        style.setProperty("--illumination-x", event.clientX + "px");
+      if (
+        style.getPropertyValue("--illumination-y") !== event.clientY + "px" &&
+        !isTouchBased
+      )
+        style.setProperty("--illumination-y", event.clientY + "px");
+    },
+    [isTouchBased],
+  );
 
   useEffect(() => {
     addEventListener("mousemove", mouseMoveHandler);
@@ -43,6 +55,5 @@ export default Illumination;
 
 // TODO list:
 // 1. don't listen multiple times
-// 2. disable on touch based devices (maybe using a different event type)
-// 3. or add transition
-// 4. or detect touch move
+// 2. or add transition
+// 3. or detect touch move
