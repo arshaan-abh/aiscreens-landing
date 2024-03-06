@@ -1,13 +1,11 @@
 import { type FC } from "react";
-import { LinkIcon, Logo } from "@/components/icons";
+import { CloseIcon, LinkIcon, Logo } from "@/components/icons";
 import FancyCard from "@/components/fancy-card";
 import AvatarGroup from "@/components/avatar-group";
 import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/sheet";
 import { Menu } from "lucide-react";
@@ -37,14 +35,11 @@ const Home: FC = () => {
           >
             Home
           </a>
-          <a
-            className="rounded-2xl px-4 py-2 tracking-tight"
-            href="#testimonial"
-          >
-            Testimonial
+          <a className="rounded-2xl px-4 py-2 tracking-tight" href="#features">
+            Features
           </a>
-          <a className="rounded-2xl px-4 py-2 tracking-tight" href="#footer">
-            Contact Us
+          <a className="rounded-2xl px-4 py-2 tracking-tight" href="#pricing">
+            Pricing
           </a>
         </div>
         <a
@@ -168,28 +163,40 @@ const Home: FC = () => {
           </a>
         </ExpandableCardsBoundary>
       </div>
-      <SheetContent className="border-teal-900 bg-teal-950">
-        <SheetHeader>
-          <SheetTitle className="text-white">Menu</SheetTitle>
-        </SheetHeader>
-        <SheetClose className="w-full text-start">
-          <a href="#home">
-            <div className="border-b border-teal-900 py-4">Home</div>
-          </a>
-        </SheetClose>
-        <SheetClose className="w-full text-start">
-          <a href="#testimonial">
-            <div className="border-b border-teal-900 py-4">Testimonial</div>
-          </a>
-        </SheetClose>
-        <SheetClose className="w-full text-start">
-          <a href="#footer">
-            <div className="border-b border-teal-900 py-4">Contact Us</div>
-          </a>
-        </SheetClose>
-        <a href="https://aiscreens.selectedstartups.com/">
-          <div className="border-b border-teal-900 py-4">Sign In</div>
-        </a>
+      <SheetContent className="grid w-fit rounded-l-3xl border-0 bg-transparent p-0 backdrop-blur-lg">
+        <FancyCard className="rounded-r-none after:rounded-r-none">
+          <div className="flex flex-col gap-5 px-5 py-10">
+            <SheetClose>
+              <CloseIcon className="mx-auto mb-2" />
+            </SheetClose>
+            <SheetClose>
+              <a href="#home">
+                <div className="rounded-full border border-white bg-white p-4 text-center font-extrabold text-secondary">
+                  Home
+                </div>
+              </a>
+            </SheetClose>
+            <SheetClose>
+              <a href="#features">
+                <div className="rounded-full border border-white p-4 text-center font-extrabold text-white">
+                  Features
+                </div>
+              </a>
+            </SheetClose>
+            <SheetClose>
+              <a href="#pricing">
+                <div className="rounded-full border border-white p-4 text-center font-extrabold text-white">
+                  Pricing
+                </div>
+              </a>
+            </SheetClose>
+            <a href="https://aiscreens.selectedstartups.com/">
+              <div className="rounded-full border border-white p-4 text-center font-extrabold text-white">
+                Sign In
+              </div>
+            </a>
+          </div>
+        </FancyCard>
       </SheetContent>
     </Sheet>
   );

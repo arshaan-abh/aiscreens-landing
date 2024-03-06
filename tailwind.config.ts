@@ -86,6 +86,9 @@ const config: Config = {
         manrope: ["var(--font-manrope)", ...defaultTheme.fontFamily.sans],
         monda: ["var(--font-monda)", ...defaultTheme.fontFamily.sans],
       },
+      borderRadius: {
+        "4xl": "2rem",
+      },
       boxShadow: {
         "border-2": "0 0 0 2px",
       },

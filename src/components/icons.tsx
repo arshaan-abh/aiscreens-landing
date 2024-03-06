@@ -73,3 +73,24 @@ export const UserIcon: FC<IconProps> = (props) => {
     </svg>
   );
 };
+
+export const CloseIcon: FC<IconProps> = (props) => {
+  const { refProp, ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="none"
+      fillRule="evenodd"
+      ref={refProp}
+      {...otherProps}
+    >
+      <path
+        fill-rule="evenodd"
+        d="M15 29.166c-6.678 0-10.017 0-12.092-2.075S.833 21.678.833 15s0-10.017 2.075-12.092S8.322.833 15 .833s10.017 0 12.092 2.075S29.167 8.321 29.167 15s0 10.017-2.075 12.092S21.678 29.166 15 29.166zm-4.293-18.46c.415-.415 1.088-.415 1.503 0l2.79 2.79 2.79-2.79c.415-.415 1.088-.415 1.503 0s.415 1.088 0 1.503L16.503 15l2.79 2.79c.415.415.415 1.088 0 1.503s-1.088.415-1.503 0L15 16.502l-2.79 2.79c-.415.415-1.088.415-1.503 0s-.415-1.088 0-1.503l2.79-2.79-2.79-2.79c-.415-.415-.415-1.088 0-1.503z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
