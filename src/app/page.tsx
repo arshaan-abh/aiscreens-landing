@@ -1,5 +1,5 @@
 import { type FC } from "react";
-import { CloseIcon, LinkIcon, Logo } from "@/components/icons";
+import { BurgerMenu, CloseIcon, LinkIcon, Logo } from "@/components/icons";
 import FancyCard from "@/components/fancy-card";
 import AvatarGroup from "@/components/avatar-group";
 import {
@@ -8,7 +8,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/sheet";
-import { Menu } from "lucide-react";
 import Features from "@/components/features";
 import Image from "next/image";
 import avatar1 from "/public/avatar-1.jpg";
@@ -49,7 +48,7 @@ const Home: FC = () => {
           Sign In
         </a>
         <SheetTrigger className="ml-auto md:hidden">
-          <Menu />
+          <BurgerMenu className="text-primary-500" />
         </SheetTrigger>
       </div>
       <div className="mb-8 grid w-main-smaller max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8 lg:w-main">
