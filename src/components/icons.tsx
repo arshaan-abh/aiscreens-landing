@@ -153,3 +153,23 @@ export const PrevSlide: FC<IconProps> = (props) => {
     </svg>
   );
 };
+
+export const CloseButton: FC<IconProps> = (props) => {
+  const { refProp, ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="30"
+      height="30"
+      fill="none"
+      ref={refProp}
+      {...otherProps}
+    >
+      <path
+        fillRule="evenodd"
+        d="M15 29.167c-6.678 0-10.017 0-12.092-2.075S.833 21.678.833 15s0-10.017 2.075-12.092S8.322.833 15 .833s10.017 0 12.092 2.075S29.167 8.322 29.167 15s0 10.017-2.075 12.092S21.678 29.167 15 29.167zm-4.293-18.46c.415-.415 1.088-.415 1.503 0l2.79 2.79 2.79-2.79c.415-.415 1.088-.415 1.503 0s.415 1.088 0 1.503L16.503 15l2.79 2.79c.415.415.415 1.088 0 1.503s-1.088.415-1.503 0L15 16.503l-2.79 2.79c-.415.415-1.088.415-1.503 0s-.415-1.088 0-1.503l2.79-2.79-2.79-2.79c-.415-.415-.415-1.088 0-1.503z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};

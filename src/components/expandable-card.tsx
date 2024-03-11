@@ -12,6 +12,7 @@ import {
 } from "react";
 import HTMLProps from "@/interfaces/html-props";
 import { c } from "@/lib/utils";
+import { CloseButton } from "./icons";
 
 const BoundaryContext = createContext<RefObject<HTMLDivElement>>({
   current: null,
@@ -47,7 +48,7 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
   const element = useRef<HTMLDivElement>(null);
   const absoluteElement = useRef<HTMLDivElement>(null);
   const boundaryElement = useContext(BoundaryContext);
-  const shrinkerElement = useRef<HTMLDivElement>(null);
+  const shrinkerElement = useRef<HTMLButtonElement>(null);
 
   const expand = useCallback(() => {
     setIsExpand(true);
@@ -139,10 +140,15 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
           {children}
         </div>
         <div
-          ref={shrinkerElement}
-          className="mt-[--p] grid
+          className="relative mt-[--p] grid
             h-[calc(var(--bb)-var(--bt)-var(--p)*3-var(--lh,1lh)-2px)] w-[calc(var(--br)-var(--bl)-var(--p)*2-var(--mx,0rem)*2-2px)]"
         >
+          <button
+            className="absolute right-0 top-[calc(var(--p)*-1+var(--lh,1lh)*-1)]"
+            ref={shrinkerElement}
+          >
+            <CloseButton />
+          </button>
           {extra}
         </div>
       </div>

@@ -21,6 +21,7 @@ import { textSlides } from "@/constants/text-slides";
 import TextSlide from "@/components/text-slider";
 import TitleSlider from "@/components/title-slider";
 import FeaturesPage from "@/components/features-page";
+import MapComponent from "@/components/map";
 
 const Home: FC = () => {
   return (
@@ -84,7 +85,11 @@ const Home: FC = () => {
               <ExpandableCard
                 className="group grid rounded-3xl bg-primary-500 p-4 text-3xl shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl
               lg:text-2xl 1.5xl:text-3xl"
-                extra={<div />}
+                extra={
+                  <div>
+                    <MapComponent className="h-full w-full" />
+                  </div>
+                }
               >
                 {/* TODO the gap must be equal to expandable card's padding */}
                 <div className="flex flex-row-reverse items-end justify-between gap-4 sm:flex-col sm:items-stretch">
