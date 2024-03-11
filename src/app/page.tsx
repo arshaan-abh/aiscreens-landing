@@ -116,9 +116,9 @@ const Home: FC = () => {
             </FancyCard>
             <a
               className="static bottom-8
-              col-start-6 col-end-13 row-start-9 row-end-13
+              col-start-1 col-end-6 row-start-9 row-end-13
               grid overflow-hidden rounded-3xl
-              lg:col-start-4 lg:col-end-7 lg:row-start-12 lg:row-end-17"
+              lg:col-start-7 lg:col-end-10 lg:row-start-12 lg:row-end-17"
             >
               <ExpandableCard
                 className="grid rounded-3xl bg-rose p-4 text-3xl text-secondary shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl
@@ -140,12 +140,12 @@ const Home: FC = () => {
             </a>
             <a
               className="static bottom-8
-              col-start-1 col-end-6 row-start-9 row-end-13
+              col-start-6 col-end-13 row-start-9 row-end-13
               grid overflow-hidden rounded-3xl
-              lg:col-start-7 lg:col-end-10 lg:row-start-12 lg:row-end-17"
+              lg:col-start-4 lg:col-end-7 lg:row-start-12 lg:row-end-17"
             >
               <ExpandableCard
-                className="grid rounded-3xl bg-rose p-4 text-3xl text-secondary shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl
+                className="grid rounded-3xl bg-primary-500 p-4 text-3xl text-white shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl
               lg:text-2xl 1.5xl:text-3xl"
                 extra={<div />}
               >
