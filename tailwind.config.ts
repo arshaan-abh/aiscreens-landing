@@ -85,6 +85,20 @@ const config: Config = {
         16: "16",
         17: "17",
       },
+      gridTemplateColumns: {
+        "12": "repeat(12, minmax(0, 1fr))",
+        "13": "repeat(13, minmax(0, 1fr))",
+        "14": "repeat(14, minmax(0, 1fr))",
+        "15": "repeat(15, minmax(0, 1fr))",
+        "16": "repeat(16, minmax(0, 1fr))",
+      },
+      gridTemplateRows: {
+        "12": "repeat(12, minmax(0, 1fr))",
+        "13": "repeat(13, minmax(0, 1fr))",
+        "14": "repeat(14, minmax(0, 1fr))",
+        "15": "repeat(15, minmax(0, 1fr))",
+        "16": "repeat(16, minmax(0, 1fr))",
+      },
       colors: {
         rose: "#FF0066",
         gray: "#B8CCCB",
