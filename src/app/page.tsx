@@ -167,10 +167,10 @@ const Home: FC = () => {
           </ExpandableCardsBoundary>
         </div>
       </div>
-      <div className="min-h-svh w-full">
+      <div className="mb-4 w-full">
         <FeaturesPage />
       </div>
-      <div className="min-h-svh w-main-smaller max-w-full px-8 lg:w-main">
+      <div className="w-main-smaller max-w-full px-8 lg:w-main">
         <PricingPage />
       </div>
       <SheetContent className="grid w-fit rounded-l-3xl border-0 bg-transparent p-0 backdrop-blur-lg">

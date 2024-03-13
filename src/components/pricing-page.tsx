@@ -43,7 +43,7 @@ const packages: Package[] = [
 const PricingPage: FC = () => {
   return (
     <>
-      <div className="mb-5 flex flex-col gap-5 rounded-4xl bg-rose px-12 py-14 text-secondary">
+      <div className="mb-4 flex flex-col gap-4 rounded-4xl bg-rose px-12 py-14 text-secondary">
         <h4 className="text-4xl font-extrabold">
           Pricing plans for teams of all sizes
         </h4>
@@ -59,9 +59,9 @@ const PricingPage: FC = () => {
           }),
         ]}
       >
-        <CarouselContent className="-ml-5 mb-5">
+        <CarouselContent className="-ml-4 mb-4">
           {packages.map((packageData, index) => (
-            <CarouselItem className="basis-1/3 pl-5" key={index}>
+            <CarouselItem className="pl-4 lg:basis-1/3" key={index}>
               <Package {...packageData} />
             </CarouselItem>
           ))}
@@ -75,7 +75,7 @@ export default PricingPage;
 
 const Package: FC<Package> = ({ name, price, description, features }) => {
   return (
-    <FancyCard className="flex h-full flex-col gap-5 p-5">
+    <FancyCard className="flex h-full flex-col gap-4 p-4">
       <h5 className="text-xl font-extrabold text-gray">{name}</h5>
       <div className="flex items-end">
         <p className="text-2xl font-bold">$</p>
@@ -87,7 +87,7 @@ const Package: FC<Package> = ({ name, price, description, features }) => {
       <div className="flex flex-col gap-3">
         {features.map((feature, index) => (
           <div
-            className={`flex items-center gap-5 ${feature ? "text-gray" : "text-primary-400"}`}
+            className={`flex items-center gap-4 ${feature ? "text-gray" : "text-primary-400"}`}
             key={index}
           >
             {feature ? <Check /> : <CheckEmpty />}
