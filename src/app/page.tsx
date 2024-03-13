@@ -53,8 +53,8 @@ const Home: FC = () => {
           <BurgerMenu className="text-primary-500" />
         </SheetTrigger>
       </div>
-      <div className="min-h-[calc(100svh-6.375rem)]">
-        <div className="mb-4 grid w-main-smaller max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8 lg:w-main">
+      <div className="min-h-[calc(100svh-6.375rem)] w-main-smaller max-w-full lg:w-main">
+        <div className="mb-4 grid grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
           <FancyCard
             className="col-start-1 col-end-17 row-start-1 row-end-8
             grid
@@ -166,7 +166,7 @@ const Home: FC = () => {
           </ExpandableCardsBoundary>
         </div>
       </div>
-      <div className="min-h-svh">
+      <div className="min-h-svh w-full">
         <FeaturesPage />
       </div>
       <SheetContent className="grid w-fit rounded-l-3xl border-0 bg-transparent p-0 backdrop-blur-lg">

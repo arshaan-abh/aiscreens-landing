@@ -14,7 +14,7 @@ const Slide3: FC<Slide2Props> = ({ className, ...otherProps }) => {
   return (
     <div
       className={c(
-        "relative col-start-8 col-end-17 row-start-1 row-end-17 h-full w-full overflow-hidden",
+        "relative col-start-1 col-end-17 row-start-8 row-end-17 h-full w-full overflow-hidden lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-17",
         className,
       )}
       {...otherProps}

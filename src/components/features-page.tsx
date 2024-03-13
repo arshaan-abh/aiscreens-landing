@@ -26,11 +26,9 @@ const slides = [
   },
   {
     image: (
-      <Image
-        src={slide2}
-        alt="Slide 2"
-        className="col-start-8 col-end-17 row-start-1 row-end-17 h-full w-full"
-      />
+      <div className="col-start-1 col-end-17 row-start-8 row-end-17 h-full w-full lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-17">
+        <Image src={slide2} alt="Slide 2" />
+      </div>
     ),
     title: "Notice Board and Integrated Media Editor",
     content:
@@ -50,11 +48,9 @@ const slides = [
   },
   {
     image: (
-      <Image
-        src={slide5}
-        alt="Slide 5"
-        className="col-start-8 col-end-17 row-start-1 row-end-17 h-full w-full"
-      />
+      <div className="col-start-1 col-end-17 row-start-8 row-end-17 h-full w-full lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-17">
+        <Image src={slide5} alt="Slide 5" />
+      </div>
     ),
     title: "Real-Time Web Page Streaming",
     content:
@@ -89,59 +85,65 @@ const FeaturesPage: FC = () => {
   }, [api, apiImage]);
 
   return (
-    <div className="relative flex w-screen justify-center">
-      <div className="grid w-main-smaller max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8 lg:w-main">
-        <FancyCard className="col-start-1 col-end-8 row-start-1 row-end-17 gap-6 p-8 backdrop-blur-2xl">
-          <div className="flex gap-2">
-            <button onClick={prevHandler}>
-              <PrevSlide className="text-primary-500" />
-            </button>
-            <button onClick={nextHandler}>
-              <NextSlide className="text-primary-500" />
-            </button>
+    <div className="relative">
+      <div className="mx-auto w-main-smaller max-w-full justify-center lg:w-main">
+        <div className="grid grid-cols-16 grid-rows-16 gap-4 px-8">
+          <FancyCard
+            className="col-start-1 col-end-17 row-start-1 row-end-8
+            gap-6 p-8 backdrop-blur-2xl
+            lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
+          >
+            <div className="flex gap-2">
+              <button onClick={prevHandler}>
+                <PrevSlide className="text-primary-500" />
+              </button>
+              <button onClick={nextHandler}>
+                <NextSlide className="text-primary-500" />
+              </button>
+            </div>
+            <Carousel
+              opts={{
+                watchDrag: false,
+              }}
+              setApi={setApi}
+              className="grid"
+            >
+              <CarouselContent className="-ml-8">
+                {slides.map((slide, index) => (
+                  <CarouselItem
+                    className="flex flex-col justify-end gap-6 pl-8"
+                    key={index}
+                  >
+                    <h3 className="text-5xl font-extrabold">{slide.title}</h3>
+                    <div className="h-px bg-gradient-to-l from-gradient-from to-gradient-to" />
+                    <p className="text-gray">{slide.content}</p>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </FancyCard>
+          <div className="pointer-events-none absolute inset-0 -z-10">
+            <Carousel
+              opts={{
+                watchDrag: false,
+              }}
+              setApi={setApiImage}
+              className="grid h-full"
+            >
+              <CarouselContent className="-ml-8 h-full">
+                {slides.map((slide, index) => (
+                  <CarouselItem
+                    className="flex justify-start pl-8 lg:items-center"
+                    key={index}
+                  >
+                    <div className="mx-auto grid w-main-smaller max-w-full grid-cols-16 grid-rows-16 gap-4 px-8 lg:w-main">
+                      {slide.image}
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
-          <Carousel
-            opts={{
-              watchDrag: false,
-            }}
-            setApi={setApi}
-            className="grid"
-          >
-            <CarouselContent className="-ml-8">
-              {slides.map((slide, index) => (
-                <CarouselItem
-                  className="flex flex-col justify-end gap-6 pl-8"
-                  key={index}
-                >
-                  <h3 className="text-5xl font-extrabold">{slide.title}</h3>
-                  <div className="h-px bg-gradient-to-l from-gradient-from to-gradient-to" />
-                  <p className="text-gray">{slide.content}</p>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-        </FancyCard>
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <Carousel
-            opts={{
-              watchDrag: false,
-            }}
-            setApi={setApiImage}
-            className="grid h-full"
-          >
-            <CarouselContent className="-ml-8 h-full">
-              {slides.map((slide, index) => (
-                <CarouselItem
-                  className="flex items-center justify-start pl-8"
-                  key={index}
-                >
-                  <div className="mx-auto grid w-main-smaller max-w-full grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8 lg:w-main">
-                    {slide.image}
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
         </div>
       </div>
     </div>
