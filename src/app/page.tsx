@@ -22,6 +22,7 @@ import TextSlide from "@/components/text-slider";
 import TitleSlider from "@/components/title-slider";
 import FeaturesPage from "@/components/features-page";
 import TestimonialPage from "@/components/testimonial-page";
+import PricingPage from "@/components/pricing-page";
 
 const Home: FC = () => {
   return (
@@ -168,6 +169,9 @@ const Home: FC = () => {
       </div>
       <div className="min-h-svh w-full">
         <FeaturesPage />
+      </div>
+      <div className="min-h-svh w-main-smaller max-w-full px-8 lg:w-main">
+        <PricingPage />
       </div>
       <SheetContent className="grid w-fit rounded-l-3xl border-0 bg-transparent p-0 backdrop-blur-lg">
         <FancyCard className="rounded-r-none after:rounded-r-none">

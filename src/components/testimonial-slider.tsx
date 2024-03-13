@@ -13,9 +13,7 @@ interface Testimonial {
   star: 0 | 1 | 2 | 3 | 4 | 5;
 }
 
-type Testimonials = Testimonial[];
-
-const testimonials: Testimonials = [
+const testimonials: Testimonial[] = [
   {
     image: person1,
     name: "Rachel A",

@@ -254,3 +254,41 @@ export const Star: FC<IconProps> = (props) => {
     </svg>
   );
 };
+
+export const Check: FC<IconProps> = (props) => {
+  const { refProp, ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="currentColor"
+      fillRule="evenodd"
+      ref={refProp}
+      {...otherProps}
+    >
+      <path d="M10 1.042A8.96 8.96 0 0 0 1.042 10 8.96 8.96 0 0 0 10 18.958 8.96 8.96 0 0 0 18.959 10 8.96 8.96 0 0 0 10 1.042zM2.292 10A7.71 7.71 0 0 1 10 2.292 7.71 7.71 0 0 1 17.709 10 7.71 7.71 0 0 1 10 17.708 7.71 7.71 0 0 1 2.292 10z" />
+      <path d="M19 10a9 9 0 1 1-18 0 9 9 0 1 1 18 0zm-5.373-2.727c.264.264.264.691 0 .955l-4.5 4.5c-.264.264-.691.264-.955 0l-1.8-1.8c-.264-.264-.264-.691 0-.955s.691-.264.955 0l1.323 1.323 2.011-2.011 2.011-2.011c.264-.264.691-.264.955 0z" />
+    </svg>
+  );
+};
+
+export const CheckEmpty: FC<IconProps> = (props) => {
+  const { refProp, ...otherProps } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      fill="none"
+      ref={refProp}
+      {...otherProps}
+    >
+      <path
+        fillRule="evenodd"
+        d="M10 1.042A8.96 8.96 0 0 0 1.042 10 8.96 8.96 0 0 0 10 18.958 8.96 8.96 0 0 0 18.959 10 8.96 8.96 0 0 0 10 1.042zM2.292 10A7.71 7.71 0 0 1 10 2.292 7.71 7.71 0 0 1 17.709 10 7.71 7.71 0 0 1 10 17.708 7.71 7.71 0 0 1 2.292 10z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+};
