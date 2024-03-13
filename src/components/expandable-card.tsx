@@ -144,7 +144,8 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
             h-[calc(var(--bb)-var(--bt)-var(--p)*3-var(--lh,1lh)-2px)] w-[calc(var(--br)-var(--bl)-var(--p)*2-var(--mx,0rem)*2-2px)]"
         >
           <button
-            className="absolute right-0 top-[calc(var(--p)*-1+var(--lh,1lh)*-1)]"
+            data-is-expanded={isExpanded}
+            className="absolute right-0 top-[calc(var(--p)*-1+var(--lh,1lh)*-1)] transition-opacity duration-1000 data-[is-expanded=false]:opacity-0 data-[is-expanded=true]:opacity-100"
             ref={shrinkerElement}
           >
             <CloseButton />
