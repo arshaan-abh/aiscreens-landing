@@ -58,18 +58,7 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
     setIsExpand(false);
   }, []);
 
-  useEffect(() => {
-    const elementCurrent = element.current;
-    const shrinkerElementCurrent = shrinkerElement.current;
-    elementCurrent?.addEventListener("click", expand);
-    shrinkerElementCurrent?.addEventListener("click", shrink);
-    return () => {
-      elementCurrent?.removeEventListener("click", expand);
-      shrinkerElementCurrent?.removeEventListener("click", shrink);
-    };
-  }, [expand, shrink]);
-
-  useEffect(() => {
+  const setUp = useCallback(() => {
     if (!element.current) return;
     if (!absoluteElement.current) return;
     const expandableDOMRect = element.current.getBoundingClientRect();
@@ -113,6 +102,20 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
       boundaryDOMRect.left + "px",
     );
   }, [boundaryElement]);
+
+  useEffect(() => {
+    const elementCurrent = element.current;
+    const shrinkerElementCurrent = shrinkerElement.current;
+    elementCurrent?.addEventListener("click", expand);
+    shrinkerElementCurrent?.addEventListener("click", shrink);
+    addEventListener("resize", setUp);
+    setUp();
+    return () => {
+      elementCurrent?.removeEventListener("click", expand);
+      shrinkerElementCurrent?.removeEventListener("click", shrink);
+      removeEventListener("resize", setUp);
+    };
+  }, [expand, setUp, shrink]);
 
   return (
     <>
@@ -164,4 +167,3 @@ export { ExpandableCardsBoundary, ExpandableCard };
 // 2. dynamic one pixel
 // 3. dynamic transition
 // 4. optimize and reformat
-// 5. add resize listener
