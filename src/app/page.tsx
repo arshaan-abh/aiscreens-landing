@@ -216,3 +216,4 @@ export default Home;
 
 // TODO list:
 // 1. use grid-rows-16 instead?
+// 2. fix slider paddings
