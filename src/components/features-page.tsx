@@ -87,10 +87,10 @@ const FeaturesPage: FC = () => {
   return (
     <div className="relative">
       <div className="mx-auto w-main-smaller max-w-full justify-center lg:w-main">
-        <div className="grid grid-cols-16 grid-rows-16 gap-4 px-8">
+        <div className="grid-cols-16 grid-rows-16 gap-4 px-8 lg:grid">
           <FancyCard
             className="col-start-1 col-end-17 row-start-1 row-end-8
-            gap-6 p-8 backdrop-blur-2xl
+            mb-4 gap-6 p-8 backdrop-blur-2xl
             lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
           >
             <div className="flex gap-2">
@@ -122,7 +122,7 @@ const FeaturesPage: FC = () => {
               </CarouselContent>
             </Carousel>
           </FancyCard>
-          <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="lg:pointer-events-none lg:absolute lg:inset-0 lg:-z-10">
             <Carousel
               opts={{
                 watchDrag: false,
@@ -136,7 +136,7 @@ const FeaturesPage: FC = () => {
                     className="flex justify-start pl-8 lg:items-center"
                     key={index}
                   >
-                    <div className="mx-auto grid w-main-smaller max-w-full grid-cols-16 grid-rows-16 gap-4 px-8 lg:w-main">
+                    <div className="mx-auto w-main-smaller max-w-full grid-cols-16 grid-rows-16 gap-4 px-8 lg:grid lg:w-main">
                       {slide.image}
                     </div>
                   </CarouselItem>
