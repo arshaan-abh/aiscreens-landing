@@ -58,15 +58,23 @@ const PricingPage: FC = () => {
             delay: 3000,
           }),
         ]}
+        className="lg:hidden"
       >
         <CarouselContent className="-ml-4 mb-4">
           {packages.map((packageData, index) => (
-            <CarouselItem className="pl-4 lg:basis-1/3" key={index}>
+            <CarouselItem className="pl-4" key={index}>
               <Package {...packageData} />
             </CarouselItem>
           ))}
         </CarouselContent>
       </Carousel>
+      <div className="mb-4 hidden gap-4 lg:flex">
+        {packages.map((packageData, index) => (
+          <div className="basis-1/3" key={index}>
+            <Package {...packageData} />
+          </div>
+        ))}
+      </div>
     </>
   );
 };
