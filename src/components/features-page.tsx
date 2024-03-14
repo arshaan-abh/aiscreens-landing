@@ -1,5 +1,5 @@
 "use client";
-import { useState, type FC, useCallback } from "react";
+import { useState, type FC, useCallback, useRef } from "react";
 import FancyCard from "./fancy-card";
 import { NextSlide, PrevSlide } from "./icons";
 import {
@@ -73,6 +73,7 @@ const slides = [
 const FeaturesPage: FC = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [apiImage, setApiImage] = useState<CarouselApi>();
+  const imageSlider = useRef<HTMLDivElement>(null);
 
   const nextHandler = useCallback(() => {
     api?.scrollNext();
@@ -91,7 +92,7 @@ const FeaturesPage: FC = () => {
           <FancyCard
             className="col-start-1 col-end-17 row-start-1 row-end-8
             mb-4 gap-6 p-8 backdrop-blur-2xl
-            lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17"
+            lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17 lg:mb-0"
           >
             <div className="flex gap-2">
               <button onClick={prevHandler}>
@@ -122,7 +123,10 @@ const FeaturesPage: FC = () => {
               </CarouselContent>
             </Carousel>
           </FancyCard>
-          <div className="lg:pointer-events-none lg:absolute lg:inset-0 lg:-z-10">
+          <div
+            className="absolute inset-x-0 lg:pointer-events-none lg:inset-0 lg:-z-10"
+            ref={imageSlider}
+          >
             <Carousel
               opts={{
                 watchDrag: false,
@@ -143,6 +147,9 @@ const FeaturesPage: FC = () => {
                 ))}
               </CarouselContent>
             </Carousel>
+          </div>
+          <div className="invisible lg:hidden">
+            <Image src={slide2} alt="Slide 2" />
           </div>
         </div>
       </div>
