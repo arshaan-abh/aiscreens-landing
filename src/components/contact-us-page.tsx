@@ -62,7 +62,7 @@ const ContactUsPage: FC = () => {
             placeholder="Phone Number"
           />
           <textarea
-            className="resize-none rounded-2xl border border-white bg-black/10 px-4 py-2 text-sm placeholder:text-white"
+            className="grow resize-none rounded-2xl border border-white bg-black/10 px-4 py-2 text-sm placeholder:text-white"
             placeholder="Message"
           />
           <button className="rounded-2xl bg-white px-4 py-2 text-center text-sm font-bold text-secondary">
