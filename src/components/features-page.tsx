@@ -86,7 +86,7 @@ const FeaturesPage: FC = () => {
   }, [api, apiImage]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <div className="mx-auto w-main-smaller max-w-full justify-center lg:w-main">
         <div className="grid-cols-16 grid-rows-16 gap-4 px-8 lg:grid">
           <FancyCard

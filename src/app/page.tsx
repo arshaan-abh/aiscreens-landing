@@ -29,7 +29,7 @@ import AboutUsPage from "@/components/about-us-page";
 const Home: FC = () => {
   return (
     <Sheet>
-      <div className="sticky top-0 z-30 flex w-main max-w-full items-center gap-12 bg-gradient-to-b from-secondary to-transparent p-8">
+      <div className="fixed top-0 z-30 flex w-main max-w-full items-center gap-12 bg-gradient-to-b from-secondary to-transparent p-8">
         {/* TODO add backdrop */}
         <Logo />
         <div className="hidden gap-4 text-sm md:flex">
@@ -56,7 +56,7 @@ const Home: FC = () => {
           <BurgerMenu className="text-primary-500" />
         </SheetTrigger>
       </div>
-      <div className="min-h-[calc(100svh-6.375rem)] w-main-smaller max-w-full lg:w-main">
+      <div className="flex min-h-svh w-main-smaller max-w-full snap-start items-center pt-[6.375rem] lg:w-main">
         <div className="mb-4 grid grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
           <FancyCard
             className="col-start-1 col-end-17 row-start-1 row-end-8
@@ -169,10 +169,10 @@ const Home: FC = () => {
           </ExpandableCardsBoundary>
         </div>
       </div>
-      <div className="mb-4 w-full">
+      <div className="mb-4 flex min-h-svh w-full snap-start items-center justify-center pt-[6.375rem]">
         <FeaturesPage />
       </div>
-      <div className="w-main-smaller max-w-full px-8 lg:w-main">
+      <div className="flex min-h-svh w-main-smaller max-w-full snap-start flex-col justify-center px-8 pt-[6.375rem] lg:w-main">
         <PricingPage />
       </div>
       <SheetContent className="grid w-fit rounded-l-3xl border-0 bg-transparent p-0 backdrop-blur-lg">
