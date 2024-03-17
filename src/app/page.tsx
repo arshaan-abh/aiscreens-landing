@@ -23,6 +23,7 @@ import TitleSlider from "@/components/title-slider";
 import FeaturesPage from "@/components/features-page";
 import TestimonialPage from "@/components/testimonial-page";
 import PricingPage from "@/components/pricing-page";
+import ContactUsPage from "@/components/contact-us-page";
 
 const Home: FC = () => {
   return (
@@ -125,7 +126,7 @@ const Home: FC = () => {
               <ExpandableCard
                 className="grid rounded-3xl bg-rose p-4 text-3xl text-secondary shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-rose/50 data-[is-expanded=true]:backdrop-blur-2xl
               lg:text-2xl 1.5xl:text-3xl"
-                extra={<div />}
+                extra={<ContactUsPage />}
               >
                 <div className="flex flex-col gap-4">
                   <div className="hidden items-start gap-4 sm:flex">
