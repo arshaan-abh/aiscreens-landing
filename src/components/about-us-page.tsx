@@ -5,7 +5,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "./icons";
 
 const AboutUsPage: FC = () => {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="mt-4 grid grid-cols-2 gap-4">
       <div className="flex flex-col justify-between">
         <div className="text-base">
           <p>
