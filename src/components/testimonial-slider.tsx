@@ -1,6 +1,8 @@
 import type { Dispatch, FC, SetStateAction } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./carousel";
 import person1 from "/public/person-1.jpg";
+import person2 from "/public/person-2.jpg";
+import person3 from "/public/person-3.jpg";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { Star, StarFill } from "./icons";
@@ -23,7 +25,7 @@ const testimonials: Testimonial[] = [
     star: 4,
   },
   {
-    image: person1,
+    image: person2,
     name: "John M.",
     job: "Small Business Owner",
     content:
@@ -31,7 +33,7 @@ const testimonials: Testimonial[] = [
     star: 5,
   },
   {
-    image: person1,
+    image: person3,
     name: "Emily L.",
     job: "Retail Store Owner",
     content:
