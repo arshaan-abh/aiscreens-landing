@@ -183,7 +183,10 @@ const Home: FC = () => {
         >
           <FeaturesPage />
         </div>
-        <div className="flex min-h-svh w-main-smaller max-w-full snap-start flex-col justify-center px-8 pt-[6.375rem] lg:w-main">
+        <div
+          id="pricing"
+          className="flex min-h-svh w-main-smaller max-w-full snap-start flex-col justify-center px-8 pt-[6.375rem] lg:w-main"
+        >
           <PricingPage />
         </div>
         <SheetContent className="grid w-fit rounded-l-3xl border-0 bg-transparent p-0 backdrop-blur-lg">
