@@ -47,7 +47,7 @@ const slides = [
     image: slide6,
     title: "Scheduling Innovation",
     content:
-      "Maintaining organization is crucial for marketing success.Every message needs precise timing to maximize its impact...",
+      "Maintaining organization is crucial for marketing success. Every message needs precise timing to maximize its impact...",
   },
   {
     image: slide7,
