@@ -1,5 +1,5 @@
 "use client";
-import { useState, type FC, useCallback, useRef } from "react";
+import { useState, type FC, useCallback, useRef, useEffect } from "react";
 import FancyCard from "./fancy-card";
 import { NextSlide, PrevSlide } from "./icons";
 import {
@@ -74,16 +74,40 @@ const FeaturesPage: FC = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [apiImage, setApiImage] = useState<CarouselApi>();
   const imageSlider = useRef<HTMLDivElement>(null);
+  const [prevEnabled, setPrevEnabled] = useState(false);
+  const [nextEnabled, setNextEnabled] = useState(false);
+
+  const disabilityHandler = useCallback(() => {
+    if (api?.selectedScrollSnap() === 0) {
+      setPrevEnabled(false);
+      setNextEnabled(true);
+    } else if (
+      api?.selectedScrollSnap() ===
+      (api?.scrollSnapList().length ?? 0) - 1
+    ) {
+      setPrevEnabled(true);
+      setNextEnabled(false);
+    } else {
+      setPrevEnabled(true);
+      setNextEnabled(true);
+    }
+  }, [api]);
+
+  useEffect(() => {
+    disabilityHandler();
+  }, [disabilityHandler]);
 
   const nextHandler = useCallback(() => {
     api?.scrollNext();
     apiImage?.scrollNext();
-  }, [api, apiImage]);
+    disabilityHandler();
+  }, [api, apiImage, disabilityHandler]);
 
   const prevHandler = useCallback(() => {
     api?.scrollPrev();
     apiImage?.scrollPrev();
-  }, [api, apiImage]);
+    disabilityHandler();
+  }, [api, apiImage, disabilityHandler]);
 
   return (
     <div className="relative w-full">
@@ -95,11 +119,19 @@ const FeaturesPage: FC = () => {
             lg:col-start-1 lg:col-end-8 lg:row-start-1 lg:row-end-17 lg:mb-0"
           >
             <div className="flex gap-2">
-              <button onClick={prevHandler}>
-                <PrevSlide className="text-primary-500" />
+              <button
+                className="group"
+                onClick={prevHandler}
+                disabled={!prevEnabled}
+              >
+                <PrevSlide className="text-primary-500 transition-colors group-disabled:text-primary-400" />
               </button>
-              <button onClick={nextHandler}>
-                <NextSlide className="text-primary-500" />
+              <button
+                className="group"
+                onClick={nextHandler}
+                disabled={!nextEnabled}
+              >
+                <NextSlide className="text-primary-500 transition-colors group-disabled:text-primary-400" />
               </button>
             </div>
             <Carousel

@@ -1,19 +1,43 @@
 "use client";
-import { useCallback, useState, type FC } from "react";
+import { useCallback, useState, type FC, useEffect } from "react";
 import { ImageBorder, NextSlide, PrevSlide, Quotes } from "./icons";
 import TestimonialSlider from "./testimonial-slider";
 import { CarouselApi } from "./carousel";
 
 const TestimonialPage: FC = () => {
   const [api, setApi] = useState<CarouselApi>();
+  const [prevEnabled, setPrevEnabled] = useState(false);
+  const [nextEnabled, setNextEnabled] = useState(false);
+
+  const disabilityHandler = useCallback(() => {
+    if (api?.selectedScrollSnap() === 0) {
+      setPrevEnabled(false);
+      setNextEnabled(true);
+    } else if (
+      api?.selectedScrollSnap() ===
+      (api?.scrollSnapList().length ?? 0) - 1
+    ) {
+      setPrevEnabled(true);
+      setNextEnabled(false);
+    } else {
+      setPrevEnabled(true);
+      setNextEnabled(true);
+    }
+  }, [api]);
+
+  useEffect(() => {
+    disabilityHandler();
+  }, [disabilityHandler]);
 
   const nextHandler = useCallback(() => {
     api?.scrollNext();
-  }, [api]);
+    disabilityHandler();
+  }, [api, disabilityHandler]);
 
   const prevHandler = useCallback(() => {
     api?.scrollPrev();
-  }, [api]);
+    disabilityHandler();
+  }, [api, disabilityHandler]);
 
   return (
     <div className="relative mt-4 flex flex-col items-center">
@@ -22,12 +46,20 @@ const TestimonialPage: FC = () => {
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-between">
         <div className="flex items-center">
-          <button onClick={prevHandler} className="z-10">
-            <PrevSlide />
+          <button
+            onClick={prevHandler}
+            className="group z-10"
+            disabled={!prevEnabled}
+          >
+            <PrevSlide className="transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
           </button>
           <ImageBorder />
-          <button onClick={nextHandler} className="z-10">
-            <NextSlide />
+          <button
+            onClick={nextHandler}
+            className="group z-10"
+            disabled={!nextEnabled}
+          >
+            <NextSlide className="transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
           </button>
         </div>
         <Quotes className="ml-auto text-primary-600 opacity-50" />
