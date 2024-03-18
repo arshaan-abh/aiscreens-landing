@@ -25,7 +25,7 @@ const AboutUsPage: FC = () => {
             what&#39;s possible in screen marketing.
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 text-white">
           <Instagram />
           <Twitter />
           <Facebook />

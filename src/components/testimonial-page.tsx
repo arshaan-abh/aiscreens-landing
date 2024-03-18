@@ -53,7 +53,7 @@ const TestimonialPage: FC = () => {
             className="group z-10"
             disabled={!prevEnabled}
           >
-            <PrevSlide className="transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
+            <PrevSlide className="text-white transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
           </button>
           <ImageBorder />
           <button
@@ -61,7 +61,7 @@ const TestimonialPage: FC = () => {
             className="group z-10"
             disabled={!nextEnabled}
           >
-            <NextSlide className="transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
+            <NextSlide className="text-white transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
           </button>
         </div>
         <Quotes className="ml-auto text-primary-600 opacity-50" />

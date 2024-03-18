@@ -60,17 +60,15 @@ const TestimonialSlider: FC<TestimonialSliderProps> = ({ setApi }) => {
                 alt={testimonial.name}
               />
               <div className="flex flex-col">
-                <h4 className="text-center text-2xl font-bold">
+                <h4 className="text-center text-2xl font-bold text-white">
                   {testimonial.name}
                 </h4>
                 <p className="text-center text-sm text-primary-700">
                   {testimonial.job}
                 </p>
               </div>
-              <p className="w-[368px] text-center text-base">
-                Using AiScreens for our marketing campaigns has been a
-                game-changer. It&#39;s like having a virtual marketing
-                strategist working around the clock!
+              <p className="w-[368px] text-center text-base text-white">
+                {testimonial.content}
               </p>
               <div className="flex flex-row gap-1 text-primary-700">
                 {Array.from(Array(testimonial.star), (_, index) => (

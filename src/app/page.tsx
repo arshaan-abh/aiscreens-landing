@@ -94,12 +94,12 @@ const Home: FC = () => {
               lg:col-start-1 lg:col-end-4 lg:row-start-12 lg:row-end-17"
               >
                 <ExpandableCard
-                  className="group grid rounded-3xl bg-primary-500 p-4 text-3xl shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl
+                  className="group grid rounded-3xl bg-primary-500 p-4 text-3xl text-secondary shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl
               lg:text-2xl 1.5xl:text-3xl"
                   extra={<TestimonialPage />}
                 >
                   {/* TODO the gap must be equal to expandable card's padding */}
-                  <div className="flex flex-row-reverse items-end justify-between gap-4 sm:flex-col sm:items-stretch">
+                  <div className="flex flex-row-reverse items-end justify-between gap-4 text-white sm:flex-col sm:items-stretch">
                     <div className="flex items-start justify-between gap-4">
                       <AvatarGroup
                         className="transition-opacity duration-1000 group-[[data-is-expanded=true]]:opacity-0"
@@ -157,7 +157,7 @@ const Home: FC = () => {
               lg:col-start-4 lg:col-end-7 lg:row-start-12 lg:row-end-17"
               >
                 <ExpandableCard
-                  className="grid rounded-3xl bg-primary-500 p-4 text-3xl text-white shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl
+                  className="grid rounded-3xl bg-primary-500 p-4 text-3xl text-secondary shadow-border-2 shadow-secondary [--lh:unset] data-[is-expanded=true]:rounded-[calc(1.5rem-1px)] data-[is-expanded=true]:bg-primary-500/50 data-[is-expanded=true]:backdrop-blur-2xl
               lg:text-2xl 1.5xl:text-3xl"
                   extra={<AboutUsPage />}
                 >
