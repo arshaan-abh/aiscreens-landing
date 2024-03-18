@@ -1,5 +1,12 @@
 "use client";
-import { useState, type FC, useCallback, useRef, useEffect } from "react";
+import {
+  useState,
+  type FC,
+  useCallback,
+  useRef,
+  useEffect,
+  useContext,
+} from "react";
 import FancyCard from "./fancy-card";
 import { NextSlide, PrevSlide } from "./icons";
 import {
@@ -16,6 +23,7 @@ import slide5 from "/public/slide-5-big.png";
 import Slide6 from "./slides-detailed/slide-6";
 import Slide7 from "./slides-detailed/slide-7";
 import Image from "next/image";
+import { Context } from "@/contexts/context";
 
 const slides = [
   {
@@ -76,6 +84,7 @@ const FeaturesPage: FC = () => {
   const imageSlider = useRef<HTMLDivElement>(null);
   const [prevEnabled, setPrevEnabled] = useState(false);
   const [nextEnabled, setNextEnabled] = useState(false);
+  const { setContext } = useContext(Context);
 
   const disabilityHandler = useCallback(() => {
     if (api?.selectedScrollSnap() === 0) {
@@ -92,6 +101,19 @@ const FeaturesPage: FC = () => {
       setNextEnabled(true);
     }
   }, [api]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      api?.scrollTo(index);
+      apiImage?.scrollTo(index);
+      disabilityHandler();
+    },
+    [api, apiImage, disabilityHandler],
+  );
+
+  useEffect(() => {
+    setContext(() => scrollTo);
+  }, [scrollTo, setContext]);
 
   useEffect(() => {
     disabilityHandler();

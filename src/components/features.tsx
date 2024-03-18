@@ -1,6 +1,6 @@
 "use client";
 import Autoplay from "embla-carousel-autoplay";
-import type { FC } from "react";
+import { useContext, type FC } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./carousel";
 import Image from "next/image";
 import slide1 from "/public/slide-1.png";
@@ -10,6 +10,7 @@ import slide4 from "/public/slide-4.png";
 import slide5 from "/public/slide-5.png";
 import slide6 from "/public/slide-6.png";
 import slide7 from "/public/slide-7.png";
+import { Context } from "@/contexts/context";
 
 const slides = [
   {
@@ -57,6 +58,8 @@ const slides = [
 ];
 
 const Features: FC = () => {
+  const { context } = useContext(Context);
+
   return (
     <Carousel
       className="grid"
@@ -76,9 +79,13 @@ const Features: FC = () => {
               <div className="grid h-full w-2/3 grid-cols-6 gap-8 sm:w-auto">
                 <div className="col-span-3 hidden h-full flex-col items-start justify-between gap-8 sm:flex xl:col-span-2">
                   <div className="text-lg text-gray">{slide.content}</div>
-                  <div className="rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold tracking-tight">
-                    Explore Features
-                  </div>
+                  <a
+                    onClick={context.bind(null, index)}
+                    href="#features"
+                    className="rounded-2xl bg-primary-500 px-4 py-2 text-sm font-bold tracking-tight"
+                  >
+                    More
+                  </a>
                 </div>
                 <div className="col-span-6 flex items-center justify-center sm:col-span-3 sm:items-end sm:justify-end xl:col-span-4">
                   <Image src={slide.image} alt={`Slide ${index}`} />
