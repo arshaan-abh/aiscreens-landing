@@ -27,17 +27,19 @@ const TestimonialPage: FC = () => {
 
   useEffect(() => {
     disabilityHandler();
-  }, [disabilityHandler]);
+    api?.on("select", disabilityHandler);
+    return () => {
+      api?.off("select", disabilityHandler);
+    };
+  }, [api, disabilityHandler]);
 
   const nextHandler = useCallback(() => {
     api?.scrollNext();
-    disabilityHandler();
-  }, [api, disabilityHandler]);
+  }, [api]);
 
   const prevHandler = useCallback(() => {
     api?.scrollPrev();
-    disabilityHandler();
-  }, [api, disabilityHandler]);
+  }, [api]);
 
   return (
     <div className="relative mt-4 flex flex-col items-center">
