@@ -28,9 +28,15 @@ import ContactUsPage from "@/components/contact-us-page";
 import AboutUsPage from "@/components/about-us-page";
 import { Context } from "@/contexts/context";
 import { defaultValue } from "@/contexts/context-default-value";
+import SwitchParent from "@/components/switch-parent";
+import useResponsiveState from "@/hooks/use-responsive-state";
 
 const Home: FC = () => {
   const [context, setContext] = useState(defaultValue);
+  const isPhone = useResponsiveState<boolean>({
+    defaultState: true,
+    breakpoints: [{ breakpoint: 480, state: false }],
+  });
   return (
     <Context.Provider value={{ context, setContext }}>
       <Sheet>
@@ -65,7 +71,12 @@ const Home: FC = () => {
           </SheetTrigger>
         </div>
         <div className="flex min-h-svh w-main-smaller max-w-full snap-start items-center pt-[6.375rem] lg:w-main">
-          <div className="mb-4 grid grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4 px-8">
+          <SwitchParent
+            condition={isPhone}
+            component1={ExpandableCardsBoundary}
+            component2="div"
+            className="mx-8 mb-4 grid grid-cols-[repeat(16,1fr)] grid-rows-[repeat(16,1fr)] gap-4"
+          >
             <FancyCard
               className="col-start-1 col-end-17 row-start-1 row-end-8
             grid
@@ -83,7 +94,10 @@ const Home: FC = () => {
                 </div>
               </div>
             </FancyCard>
-            <ExpandableCardsBoundary
+            <SwitchParent
+              condition={isPhone}
+              component1="div"
+              component2={ExpandableCardsBoundary}
               className="col-start-1 col-end-17 row-start-8 row-end-17
             grid grid-cols-[repeat(9,1fr)] grid-rows-[repeat(16,1fr)] gap-4
             lg:col-start-8 lg:col-end-17 lg:row-start-1 lg:row-end-17"
@@ -174,8 +188,8 @@ const Home: FC = () => {
                   </div>
                 </ExpandableCard>
               </a>
-            </ExpandableCardsBoundary>
-          </div>
+            </SwitchParent>
+          </SwitchParent>
         </div>
         <div
           id="features"
