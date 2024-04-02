@@ -5,7 +5,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "./icons";
 
 const AboutUsPage: FC = () => {
   return (
-    <div className="mt-4 grid grid-cols-2 gap-4">
+    <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-2">
       <div className="flex flex-col justify-between">
         <div className="text-base">
           <p>
@@ -25,14 +25,18 @@ const AboutUsPage: FC = () => {
             what&#39;s possible in screen marketing.
           </p>
         </div>
-        <div className="flex gap-2 text-white">
+        <div className="mx-auto my-4 flex gap-2 text-white lg:m-0">
           <Instagram />
           <Twitter />
           <Facebook />
           <Youtube />
         </div>
       </div>
-      <Image src={image} alt="About Us" className="mt-auto translate-y-4" />
+      <Image
+        src={image}
+        alt="About Us"
+        className="mx-auto mt-auto translate-y-4"
+      />
     </div>
   );
 };
