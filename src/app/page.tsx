@@ -35,7 +35,7 @@ const Home: FC = () => {
   const [context, setContext] = useState(defaultValue);
   const isPhone = useResponsiveState<boolean>({
     defaultState: true,
-    breakpoints: [{ breakpoint: 480, state: false }],
+    breakpoints: [{ breakpoint: 640, state: false }],
   });
   return (
     <Context.Provider value={{ context, setContext }}>
