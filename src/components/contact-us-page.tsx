@@ -13,7 +13,7 @@ import {
 const ContactUsPage: FC = () => {
   return (
     <div className="mt-4 flex flex-col gap-4 text-white">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="col-span-1 flex flex-col justify-between text-base">
           <div className="flex gap-2">
             <MapPoint className="shrink-0" />
@@ -33,7 +33,7 @@ const ContactUsPage: FC = () => {
         </div>
       </div>
       <div className="h-px bg-white/50" />
-      <div className="grid grow grid-cols-2 gap-4">
+      <div className="grid grow grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="col-span-1 flex flex-col justify-between text-base">
           <p>
             We&#39;re here to guide you every step of the way. Reach out to our
