@@ -3,12 +3,16 @@ import { Carousel, CarouselContent, CarouselItem } from "./carousel";
 import person1 from "/public/person-1.jpg";
 import person2 from "/public/person-2.jpg";
 import person3 from "/public/person-3.jpg";
+import person1small from "/public/person-1-small.jpg";
+import person2small from "/public/person-2-small.jpg";
+import person3small from "/public/person-3-small.jpg";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import { Star, StarFill } from "./icons";
 
 interface Testimonial {
   image: StaticImageData;
+  smallImage: StaticImageData;
   name: string;
   job: string;
   content: string;
@@ -18,6 +22,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     image: person1,
+    smallImage: person1small,
     name: "Rachel A",
     job: "Marketing Manager",
     content:
@@ -26,6 +31,7 @@ const testimonials: Testimonial[] = [
   },
   {
     image: person2,
+    smallImage: person2small,
     name: "John M.",
     job: "Small Business Owner",
     content:
@@ -34,6 +40,7 @@ const testimonials: Testimonial[] = [
   },
   {
     image: person3,
+    smallImage: person3small,
     name: "Emily L.",
     job: "Retail Store Owner",
     content:
@@ -55,8 +62,13 @@ const TestimonialSlider: FC<TestimonialSliderProps> = ({ setApi }) => {
           <CarouselItem className="pl-8" key={index}>
             <div className="flex w-full flex-col items-center gap-4">
               <Image
-                className="mt-[13px] rounded-lg"
+                className="mt-[13px] hidden rounded-lg xs:block"
                 src={testimonial.image}
+                alt={testimonial.name}
+              />
+              <Image
+                className="mt-[13px] rounded-lg xs:hidden"
+                src={testimonial.smallImage}
                 alt={testimonial.name}
               />
               <div className="flex flex-col">
@@ -67,7 +79,7 @@ const TestimonialSlider: FC<TestimonialSliderProps> = ({ setApi }) => {
                   {testimonial.job}
                 </p>
               </div>
-              <p className="w-[368px] text-center text-base text-white">
+              <p className="w-[242px] text-center text-base text-white xs:w-[368px]">
                 {testimonial.content}
               </p>
               <div className="flex flex-row gap-1 text-primary-700">

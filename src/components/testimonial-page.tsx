@@ -1,6 +1,12 @@
 "use client";
 import { useCallback, useState, type FC, useEffect } from "react";
-import { ImageBorder, NextSlide, PrevSlide, Quotes } from "./icons";
+import {
+  ImageBorder,
+  ImageBorderSmall,
+  NextSlide,
+  PrevSlide,
+  Quotes,
+} from "./icons";
 import TestimonialSlider from "./testimonial-slider";
 import { CarouselApi } from "./carousel";
 
@@ -53,15 +59,16 @@ const TestimonialPage: FC = () => {
             className="group z-10"
             disabled={!prevEnabled}
           >
-            <PrevSlide className="text-white transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
+            <PrevSlide className="hidden text-white transition-all group-disabled:text-primary-600 group-disabled:opacity-50 3xs:block" />
           </button>
-          <ImageBorder />
+          <ImageBorder className="hidden xs:block" />
+          <ImageBorderSmall className="xs:hidden" />
           <button
             onClick={nextHandler}
             className="group z-10"
             disabled={!nextEnabled}
           >
-            <NextSlide className="text-white transition-all group-disabled:text-primary-600 group-disabled:opacity-50" />
+            <NextSlide className="hidden text-white transition-all group-disabled:text-primary-600 group-disabled:opacity-50 3xs:block" />
           </button>
         </div>
         <Quotes className="ml-auto text-primary-600 opacity-50" />
