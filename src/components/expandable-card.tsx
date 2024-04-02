@@ -65,12 +65,12 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
     const boundaryDOMRect = boundaryElement.current
       ? boundaryElement.current.getBoundingClientRect()
       : { top: 0, right: 0, bottom: 0, left: 0 };
-    absoluteElement.current.style.top = `${expandableDOMRect.top - boundaryDOMRect.top}px`;
-    absoluteElement.current.style.right = `${expandableDOMRect.right - boundaryDOMRect.right}px`;
-    absoluteElement.current.style.bottom = `${expandableDOMRect.bottom - boundaryDOMRect.bottom}px`;
-    absoluteElement.current.style.left = `${expandableDOMRect.left - boundaryDOMRect.left}px`;
-    absoluteElement.current.style.width = `${expandableDOMRect.width}px`;
-    absoluteElement.current.style.height = `${expandableDOMRect.height}px`;
+    absoluteElement.current.style.top = `${(expandableDOMRect.top - boundaryDOMRect.top).toString()}px`;
+    absoluteElement.current.style.right = `${(expandableDOMRect.right - boundaryDOMRect.right).toString()}px`;
+    absoluteElement.current.style.bottom = `${(expandableDOMRect.bottom - boundaryDOMRect.bottom).toString()}px`;
+    absoluteElement.current.style.left = `${(expandableDOMRect.left - boundaryDOMRect.left).toString()}px`;
+    absoluteElement.current.style.width = `${expandableDOMRect.width.toString()}px`;
+    absoluteElement.current.style.height = `${expandableDOMRect.height.toString()}px`;
     absoluteElement.current.style.setProperty(
       "--p",
       getComputedStyle(element.current).getPropertyValue("padding"),
@@ -78,28 +78,28 @@ const ExpandableCard: FC<ExpandableCardProps> = ({
 
     absoluteElement.current.style.setProperty(
       "--w",
-      element.current.offsetWidth + "px",
+      element.current.offsetWidth.toString() + "px",
     );
     absoluteElement.current.style.setProperty(
       "--h",
-      element.current.offsetHeight + "px",
+      element.current.offsetHeight.toString() + "px",
     );
 
     absoluteElement.current.style.setProperty(
       "--bt",
-      boundaryDOMRect.top + "px",
+      boundaryDOMRect.top.toString() + "px",
     );
     absoluteElement.current.style.setProperty(
       "--br",
-      boundaryDOMRect.right + "px",
+      boundaryDOMRect.right.toString() + "px",
     );
     absoluteElement.current.style.setProperty(
       "--bb",
-      boundaryDOMRect.bottom + "px",
+      boundaryDOMRect.bottom.toString() + "px",
     );
     absoluteElement.current.style.setProperty(
       "--bl",
-      boundaryDOMRect.left + "px",
+      boundaryDOMRect.left.toString() + "px",
     );
   }, [boundaryElement]);
 

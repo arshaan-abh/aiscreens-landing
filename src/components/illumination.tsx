@@ -8,7 +8,7 @@ interface IlluminationProps extends HTMLProps<HTMLDivElement> {
 }
 
 const Illumination: FC<IlluminationProps> = ({
-  className,
+  className = "",
   refProp,
   children,
   ...otherProps
@@ -19,15 +19,17 @@ const Illumination: FC<IlluminationProps> = ({
     (event: MouseEvent) => {
       const style = document.body.style;
       if (
-        style.getPropertyValue("--illumination-x") !== event.clientX + "px" &&
+        style.getPropertyValue("--illumination-x") !==
+          event.clientX.toString() + "px" &&
         !isTouchBased
       )
-        style.setProperty("--illumination-x", event.clientX + "px");
+        style.setProperty("--illumination-x", event.clientX.toString() + "px");
       if (
-        style.getPropertyValue("--illumination-y") !== event.clientY + "px" &&
+        style.getPropertyValue("--illumination-y") !==
+          event.clientY.toString() + "px" &&
         !isTouchBased
       )
-        style.setProperty("--illumination-y", event.clientY + "px");
+        style.setProperty("--illumination-y", event.clientY.toString() + "px");
     },
     [isTouchBased],
   );

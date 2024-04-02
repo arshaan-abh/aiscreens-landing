@@ -88,7 +88,7 @@ const Features: FC = () => {
                   </a>
                 </div>
                 <div className="col-span-6 flex items-center justify-center sm:col-span-3 sm:items-end sm:justify-end xl:col-span-4">
-                  <Image src={slide.image} alt={`Slide ${index}`} />
+                  <Image src={slide.image} alt={`Slide ${index.toString()}`} />
                 </div>
               </div>
             </div>

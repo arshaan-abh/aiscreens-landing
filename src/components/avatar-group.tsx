@@ -7,7 +7,7 @@ interface AvatarGroupProps extends HTMLProps<HTMLDivElement> {
 }
 
 const AvatarGroup: FC<AvatarGroupProps> = ({
-  className,
+  className = "",
   refProp,
   avatars,
   ...otherProps
