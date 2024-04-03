@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
     name: "Rachel A",
     job: "Marketing Manager",
     content:
-      "Using AiScreens for our marketing campaigns has been a game-changer. It's like having a virtual marketing strategist working around the clock!",
+      "Using Selected Screens for our marketing campaigns has been a game-changer. It's like having a virtual marketing strategist working around the clock!",
     star: 4,
   },
   {
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
     name: "John M.",
     job: "Small Business Owner",
     content:
-      "As a small business owner, AiScreens has allowed me to compete with larger companies on a more level playing field. It has helped me reach my target audience more effectively, resulting in higher ROI for my advertising budget.",
+      "As a small business owner, Selected Screens has allowed me to compete with larger companies on a more level playing field. It has helped me reach my target audience more effectively, resulting in higher ROI for my advertising budget.",
     star: 5,
   },
   {
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
     name: "Emily L.",
     job: "Retail Store Owner",
     content:
-      "AiScreens is one of the most innovative tools I've come across. It allows us to stay ahead of market trend sand adjust our campaigns in real-time, ensuring maximum impact. Plus, the intuitive interface makes it easy to navigate and optimize our campaigns for success.",
+      "Selected Screens is one of the most innovative tools I've come across. It allows us to stay ahead of market trends and adjust our campaigns in real-time, ensuring maximum impact. Plus, the intuitive interface makes it easy to navigate and optimize our campaigns for success.",
     star: 4,
   },
 ];

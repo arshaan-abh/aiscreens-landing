@@ -154,7 +154,8 @@ const Home: FC = () => {
                   <div className="flex flex-col gap-4">
                     <div className="hidden items-start gap-4 sm:flex">
                       <div className="flex text-sm capitalize lg:hidden xl:flex">
-                        Craft professional screen experiences with us.
+                        Contact us today to commence crafting professional
+                        screen experiences.
                       </div>
                       <LinkIcon className="ml-auto shrink-0" />
                     </div>
@@ -178,7 +179,8 @@ const Home: FC = () => {
                   <div className="flex flex-col gap-4">
                     <div className="hidden items-start gap-4 sm:flex">
                       <div className="flex text-sm capitalize lg:hidden xl:flex">
-                        We&#39;re reshaping the future of screen marketing.
+                        We are committed to reshaping the future of screen
+                        marketing.
                       </div>
                       <LinkIcon className="ml-auto shrink-0" />
                     </div>

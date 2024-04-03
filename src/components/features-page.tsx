@@ -30,7 +30,9 @@ const slides = [
     image: <Slide1 />,
     title: "Cloud Control Panel",
     content:
-      "We understand the challenges of gathering marketing materials and ideas, as well as the distractions they can bring. That's why we've revamped the entire process to make it not only smoother but also highly efficient. The AiScreens' Cloud All-in-One Control Panel is the perfect answer to your content creation and management needs. It provides a comprehensive platform that eliminates the necessity for additional devices or sites.",
+      "We understand the challenges of gathering marketing materials and ideas, as well as the distractions they can bring. That's why we've revamped the entire process to make it not only smoother but also highly efficient.",
+    content2:
+      "The Selected Screens' Cloud All-in-One Control Panel is the perfect answer to your content creation and management needs. It provides a comprehensive platform that eliminates the necessity for additional devices or sites.",
   },
   {
     image: (
@@ -40,19 +42,25 @@ const slides = [
     ),
     title: "Notice Board and Integrated Media Editor",
     content:
-      "Utilize AiScreens to broadcast essential messages and effectively communicate with your audience, simplifying the process and enhancing communication impact. Input announcement sand the system ensures they reach your target audience promptly...",
+      "Utilise Selected Screens to broadcast essential messages and effectively communicate with your audience, simplifying the process and enhancing communication impact. Input announcements and the system ensures they reach your target audience promptly.",
+    content2:
+      "Selected Screens offers a vast library of media and text options along with robust editing tools. Unlock creative possibilities with our built-in media designer, which provides templates for images and texts to craft a unique brand narrative.",
   },
   {
     image: <Slide3 />,
     title: "Media Player",
     content:
-      "AiScreens offers a versatile media player that supports both images and videos. With intuitive controls and customisable settings, you can easily curate and display your visual content with precision. Tailor your media playback to align with...",
+      "Selected Screens offers a versatile media player that supports both images and videos. With intuitive controls and customisable settings, you can easily curate and display your visual content with precision.",
+    content2:
+      "Tailor your media playback to align with your specific goals. Whether you're presenting a slideshow of images or playing a video playlist, our media player ensures a captivating and engaging experience for your audience.",
   },
   {
     image: <Slide4 />,
     title: "Tailored App Integration",
     content:
-      "Enhance your content with AiScreens' app integration. Choose from a variety of options such as YouTube, Days of the Year, RSS Feeds, GoogleReviews, and more. Customise their functionality to create a dynamic screen experience...",
+      "Enhance your content with Selected Screens' app integration. Choose from a variety of options such as YouTube, Days of the Year, RSS Feeds, Google Reviews, and more. Customise their functionality to create a dynamic screen experience.",
+    content2:
+      "With app integration, you can effortlessly enrich your displays with real-time social media updates, weather forecasts, news feeds, and other interactive elements, enhancing engagement and providing valuable information to your audience.",
   },
   {
     image: (
@@ -62,19 +70,25 @@ const slides = [
     ),
     title: "Real-Time Web Page Streaming",
     content:
-      "Cultivate dynamic communication with AiScreens. Share link sand showcase website content on screens, engaging your audience with real-time updates and interactive elements, elevating the impact of your communication strategy...",
+      "Cultivate dynamic communication with Selected Screens. Share links and showcase website content on screens, engaging your audience with real-time updates and interactive elements, elevating the impact of your communication strategy.",
+    content2:
+      "Selected Screens seamlessly integrates online content with on-site displays, ensuring a cohesive brand experience and enriching interaction with your audience. With our user-friendly interface, eal-time web page streaming has never been easier.",
   },
   {
     image: <Slide6 />,
     title: "Scheduling Innovation",
     content:
-      "Maintaining organization is crucial for marketing success. Every message needs precise timing to maximize its impact. With AiScreens' Scheduling Innovation, you can manage your marketing campaigns with agility. Arrange and schedule content effortlessly...",
+      "Maintaining organization is crucial for marketing success. Every message needs precise timing to maximize its impact. With Selected Screens' Scheduling Innovation, you can manage your marketing campaigns with agility.",
+    content2:
+      "Arrange and schedule content effortlessly, empowering real-time adjustments and performance monitoring for a harmonious brand presence. Tailor content deployment to resonate with your audience or suit campaign objectives strategically.",
   },
   {
     image: <Slide7 />,
     title: "Customised Screen Layouts with Multizones",
     content:
-      "Whether you have one screen or multiple screens, AiScreens empowers you to manage the layout on each one. With a variety of layouts to choose from, you can pick the one that best fits your preferences. Choose between a multi-zone or...",
+      "Whether you have one screen or multiple screens, Selected Screens empowers you to manage the layout on each one. With a variety of layouts to choose from, you can pick the one that best fits your preferences.",
+    content2:
+      "Choose between a multi-zone or single-zone setup based on your preferences and needs. With a multi-zone configuration, you can independently design and schedule each zone to cater to different themes or audiences.",
   },
 ];
 
@@ -171,7 +185,10 @@ const FeaturesPage: FC = () => {
                   >
                     <h3 className="text-5xl font-extrabold">{slide.title}</h3>
                     <div className="h-px bg-gradient-to-l from-gradient-from to-gradient-to" />
-                    <p className="text-gray">{slide.content}</p>
+                    <div>
+                      <p className="text-gray">{slide.content}</p>
+                      <p className="text-gray">{slide.content2}</p>
+                    </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>

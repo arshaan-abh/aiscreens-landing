@@ -9,11 +9,11 @@ const AboutUsPage: FC = () => {
       <div className="flex flex-col justify-between">
         <div className="text-base">
           <p>
-            At <span className="font-bold">AiScreens</span>, we&#39;re not just
-            a company; we&#39;re a team of passionate individuals dedicated to
-            transforming the way brands connect with their audiences. With a
-            focus on innovation and creativity, we&#39;re redefining the
-            possibilities of screen marketing.
+            At <span className="font-bold">Selected Screens</span>, we&#39;re
+            not just a company; we&#39;re a team of passionate individuals
+            dedicated to transforming the way brands connect with their
+            audiences. With a focus on innovation and creativity, we&#39;re
+            redefining the possibilities of screen marketing.
           </p>
           <p>
             Our goal is simple: to provide businesses with the tools and
@@ -21,8 +21,11 @@ const AboutUsPage: FC = () => {
             landscape. What truly drives us is our commitment to our
             clients&#39; success. We believe in building lasting partnerships
             and going above and beyond to ensure that every campaign achieves
-            its goals. Join us as we continue to push the boundaries of
-            what&#39;s possible in screen marketing.
+            its goals.
+          </p>
+          <p>
+            Join us as we continue to push the boundaries of what&#39;s possible
+            in screen marketing.
           </p>
         </div>
         <div className="mx-auto my-4 flex gap-2 text-white lg:m-0">

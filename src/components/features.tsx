@@ -23,37 +23,37 @@ const slides = [
     image: slide2,
     title: "Notice Board And Media Editor",
     content:
-      "Utilize AiScreens to broadcast essential messages and effectively communicate with your audience, simplifying the ...",
+      "Utilise Selected Screens to broadcast messages and communicate with your audience, enhancing communication.",
   },
   {
     image: slide3,
     title: "Media Player",
     content:
-      "AiScreens offers a versatile media player that supports both images and videos. With intuitive controls and customisable settings, you can ...",
+      "With intuitive controls and customisable settings, you can easily curate and display your visual content with precision.",
   },
   {
     image: slide4,
     title: "Tailored App Integration",
     content:
-      "Enhance your content with AiScreens' app integration. Choose from a variety of options such as YouTube, Days of the Year, RSS Feeds ...",
+      "With app integration, you can effortlessly enrich your displays with real-time social media updates, weather forecasts, news feeds, etc.",
   },
   {
     image: slide5,
     title: "Real-Time Web Page Streaming",
     content:
-      "Cultivate dynamic communication with AiScreens. Share link sand showcase website content on screens, engaging your audience with...",
+      "Share links and showcase website content on screens, engaging your audience with real-time updates and interactive elements.",
   },
   {
     image: slide6,
     title: "Scheduling Innovation",
     content:
-      "Maintaining organization is crucial for marketing success. Every message needs precise timing to maximize its impact...",
+      "Arrange and schedule content effortlessly, empowering real-time adjustments and monitoring for a harmonious brand presence.",
   },
   {
     image: slide7,
     title: "Customised Screen Layouts",
     content:
-      "Whether you have one screen or multiple screens, AiScreens empowers you to manage the layout on each one. With a variety of ...",
+      "Whether you have one screen or multiple screens, Selected Screens empowers you to manage the layout on each one.",
   },
 ];
 
