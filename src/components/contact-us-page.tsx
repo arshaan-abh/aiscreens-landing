@@ -15,15 +15,15 @@ const ContactUsPage: FC = () => {
     <div className="mt-4 flex flex-col gap-4 text-white">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="col-span-1 flex flex-col justify-between text-base">
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <MapPoint className="shrink-0" />
             <p>742 Evergreen Terrace Springfield</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <PhoneCall className="shrink-0" />
             <p>+1 (555) 123-4567</p>
           </div>
-          <div className="flex gap-2">
+          <div className="flex items-center gap-2">
             <Letter className="shrink-0" />
             <p>support@example.com</p>
           </div>
