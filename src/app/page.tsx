@@ -49,19 +49,19 @@ const Home: FC = () => {
             <Logo />
             <div className="hidden gap-4 text-sm md:flex">
               <a
-                className={`rounded-2xl border px-4 py-2 font-bold tracking-tight transition-colors ${activeSection === "home" ? "border-white" : "border-transparent"}`}
+                className={`rounded-2xl border px-4 py-2 tracking-tight transition-all ${activeSection === "home" ? "border-white font-bold" : "border-transparent"}`}
                 href="#home"
               >
                 Home
               </a>
               <a
-                className={`rounded-2xl border px-4 py-2 tracking-tight transition-colors ${activeSection === "features" ? "border-white" : "border-transparent"}`}
+                className={`rounded-2xl border px-4 py-2 tracking-tight transition-all ${activeSection === "features" ? "border-white font-bold" : "border-transparent"}`}
                 href="#features"
               >
                 Features
               </a>
               <a
-                className={`rounded-2xl border px-4 py-2 tracking-tight transition-colors ${activeSection === "pricing" ? "border-white" : "border-transparent"}`}
+                className={`rounded-2xl border px-4 py-2 tracking-tight transition-all ${activeSection === "pricing" ? "border-white font-bold" : "border-transparent"}`}
                 href="#pricing"
               >
                 Pricing
