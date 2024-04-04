@@ -44,8 +44,7 @@ const Home: FC = () => {
     <Context.Provider value={{ context, setContext }}>
       <Sheet>
         <main className="h-screen w-full snap-y snap-mandatory flex-col items-center overflow-y-auto overflow-x-hidden scroll-smooth">
-          <div className="fixed inset-x-0 top-0 z-30 mx-auto flex w-main max-w-full items-center gap-12 bg-gradient-to-b from-secondary to-transparent p-8">
-            {/* TODO add backdrop */}
+          <div className="nav-menu fixed inset-x-0 top-0 z-30 mx-auto flex w-main max-w-full items-center gap-12 p-8">
             <Logo />
             <div className="hidden gap-4 text-sm md:flex">
               <a

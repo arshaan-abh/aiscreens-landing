@@ -31,3 +31,12 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+
+.nav-menu {
+  background-image: linear-gradient(
+    to bottom,
+    #050505bf,
+    cubic-bezier(0.75, 0, 0.75, 0),
+    transparent
+  );
+}
