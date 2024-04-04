@@ -30,6 +30,7 @@ import { Context } from "@/contexts/context";
 import { defaultValue } from "@/contexts/context-default-value";
 import SwitchParent from "@/components/switch-parent";
 import useResponsiveState from "@/hooks/use-responsive-state";
+import useIntersectionObserver from "@/hooks/use-Intersection-observer";
 
 const Home: FC = () => {
   const [context, setContext] = useState(defaultValue);
@@ -37,6 +38,8 @@ const Home: FC = () => {
     defaultState: true,
     breakpoints: [{ breakpoint: 640, state: false }],
   });
+  const sectionIds = ["home", "features", "pricing"];
+  const activeSection = useIntersectionObserver(sectionIds);
   return (
     <Context.Provider value={{ context, setContext }}>
       <Sheet>
@@ -46,19 +49,19 @@ const Home: FC = () => {
             <Logo />
             <div className="hidden gap-4 text-sm md:flex">
               <a
-                className="rounded-2xl border border-white px-4 py-2 font-bold tracking-tight"
+                className={`rounded-2xl border px-4 py-2 font-bold tracking-tight transition-colors ${activeSection === "home" ? "border-white" : "border-transparent"}`}
                 href="#home"
               >
                 Home
               </a>
               <a
-                className="rounded-2xl px-4 py-2 tracking-tight"
+                className={`rounded-2xl border px-4 py-2 tracking-tight transition-colors ${activeSection === "features" ? "border-white" : "border-transparent"}`}
                 href="#features"
               >
                 Features
               </a>
               <a
-                className="rounded-2xl px-4 py-2 tracking-tight"
+                className={`rounded-2xl border px-4 py-2 tracking-tight transition-colors ${activeSection === "pricing" ? "border-white" : "border-transparent"}`}
                 href="#pricing"
               >
                 Pricing
@@ -221,21 +224,27 @@ const Home: FC = () => {
               </SheetClose>
               <SheetClose>
                 <a href="#home">
-                  <div className="rounded-full border border-white bg-white p-4 text-center font-extrabold text-secondary">
+                  <div
+                    className={`rounded-full border border-white p-4 text-center font-extrabold ${activeSection === "home" ? "bg-white text-secondary" : "text-white"}`}
+                  >
                     Home
                   </div>
                 </a>
               </SheetClose>
               <SheetClose>
                 <a href="#features">
-                  <div className="rounded-full border border-white p-4 text-center font-extrabold text-white">
+                  <div
+                    className={`rounded-full border border-white p-4 text-center font-extrabold ${activeSection === "features" ? "bg-white text-secondary" : "text-white"}`}
+                  >
                     Features
                   </div>
                 </a>
               </SheetClose>
               <SheetClose>
                 <a href="#pricing">
-                  <div className="rounded-full border border-white p-4 text-center font-extrabold text-white">
+                  <div
+                    className={`rounded-full border border-white p-4 text-center font-extrabold ${activeSection === "pricing" ? "bg-white text-secondary" : "text-white"}`}
+                  >
                     Pricing
                   </div>
                 </a>
