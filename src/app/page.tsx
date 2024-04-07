@@ -147,7 +147,7 @@ const Home: FC = () => {
                   className="col-start-1 col-end-13 row-start-1 row-end-9
               lg:col-start-1 lg:col-end-10 lg:row-start-1 lg:row-end-12"
                 >
-                  <Features />
+                  <Features isPhone={isPhone} />
                 </FancyCard>
                 <a
                   className="static bottom-8
