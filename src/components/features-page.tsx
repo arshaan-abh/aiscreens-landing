@@ -72,13 +72,13 @@ const slides = [
     content:
       "Cultivate dynamic communication with Selected Screens. Share links and showcase website content on screens, engaging your audience with real-time updates and interactive elements, elevating the impact of your communication strategy.",
     content2:
-      "Selected Screens seamlessly integrates online content with on-site displays, ensuring a cohesive brand experience and enriching interaction with your audience. With our user-friendly interface, eal-time web page streaming has never been easier.",
+      "Selected Screens seamlessly integrates online content with on-site displays, ensuring a cohesive brand experience and enriching interaction with your audience. With our user-friendly interface, real-time web page streaming has never been easier.",
   },
   {
     image: <Slide6 />,
     title: "Scheduling Innovation",
     content:
-      "Maintaining organization is crucial for marketing success. Every message needs precise timing to maximize its impact. With Selected Screens' Scheduling Innovation, you can manage your marketing campaigns with agility.",
+      "Maintaining organisation is crucial for marketing success. Every message needs precise timing to maximise its impact. With Selected Screens' Scheduling Innovation, you can manage your marketing campaigns with agility.",
     content2:
       "Arrange and schedule content effortlessly, empowering real-time adjustments and performance monitoring for a harmonious brand presence. Tailor content deployment to resonate with your audience or suit campaign objectives strategically.",
   },

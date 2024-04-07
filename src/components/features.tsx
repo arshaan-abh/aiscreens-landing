@@ -18,7 +18,7 @@ const slides = [
     image: slide1,
     title: "Cloud Control Panel",
     content:
-      "We understand the challenges of gathering marketing materials and ideas, as well as the distractions they can bring.",
+      "This feature provides a comprehensive platform that eliminates the necessity for additional devices or sites.",
   },
   {
     image: slide2,

@@ -17,15 +17,15 @@ const ContactUsPage: FC = () => {
         <div className="col-span-1 flex flex-col justify-between text-base">
           <div className="flex items-center gap-2">
             <MapPoint className="shrink-0" />
-            <p>742 Evergreen Terrace Springfield</p>
+            <p>4 Gordon Mews, Gordon Close, BN41 1HU, Brighton</p>
           </div>
           <div className="flex items-center gap-2">
             <PhoneCall className="shrink-0" />
-            <p>+1 (555) 123-4567</p>
+            <p>+44 1273 705050</p>
           </div>
           <div className="flex items-center gap-2">
             <Letter className="shrink-0" />
-            <p>support@example.com</p>
+            <p>hello@selectedscreens.com</p>
           </div>
         </div>
         <div className="col-span-1">
@@ -36,10 +36,10 @@ const ContactUsPage: FC = () => {
       <div className="grid grow grid-cols-1 gap-4 lg:grid-cols-2">
         <div className="col-span-1 flex flex-col justify-between text-base">
           <p>
-            We&#39;re here to guide you every step of the way. Reach out to our
-            team to learn more about how Selected Time can transform your
-            workforce management. Let&#39;s connect and explore the
-            possibilities together.
+            Have inquiries or feedback? Our team at Selected Screens is here to
+            assist you. Feel free to get in touch with us for any questions or
+            assistance you may require. We strive to provide excellent service
+            and support to ensure your satisfaction. Contact us today.
           </p>
           <div className="flex gap-2">
             <Instagram />
