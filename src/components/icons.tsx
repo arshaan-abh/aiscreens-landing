@@ -9,7 +9,7 @@ export const Logo: FC<IconProps> = (props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="256"
+      width="200"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 325.94 42.38"
       ref={refProp}
