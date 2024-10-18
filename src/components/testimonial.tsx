@@ -49,13 +49,13 @@ const Testimonial: FC = () => {
               className={`grid pl-4 transition-all lg:basis-3/4`}
             >
               <div
-                className={`grid grid-cols-[repeat(2,1fr)] rounded-2xl bg-cyan-500 sm:grid-cols-[repeat(3,1fr)]`}
+                className={`grid grid-cols-[repeat(2,1fr)] rounded-2xl bg-primary-500 sm:grid-cols-[repeat(3,1fr)]`}
               >
                 <div className="order-2 col-span-2 flex items-end justify-center p-4 pb-0 sm:order-1 sm:col-span-1">
                   <Image src={slide.image} alt="..." />
                 </div>
                 <div className="order-1 col-span-2 flex flex-col justify-around gap-4 p-8 pb-0 sm:order-2 sm:pb-8 sm:pl-0">
-                  <div className="flex flex-col gap-2 font-monda">
+                  <div className="flex flex-col gap-2">
                     <div className="text-3xl font-bold">{slide.title}</div>
                     <div className="text-2xl font-normal">
                       {slide.description}

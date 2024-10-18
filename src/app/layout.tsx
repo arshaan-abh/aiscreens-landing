@@ -1,14 +1,7 @@
-import { Inter, Rubik, Manrope, Monda } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const rubik = Rubik({ subsets: ["latin"], variable: "--font-rubik" });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope" });
-const monda = Monda({
-  subsets: ["latin"],
-  variable: "--font-monda",
-  weight: ["400", "700"],
-});
 
 export default function RootLayout({
   children,
@@ -18,8 +11,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        id="home"
-        className={`${inter.variable} ${rubik.variable} ${manrope.variable} ${monda.variable} flex flex-col items-center bg-zinc-950 font-inter text-white`}
+        className={`${manrope.variable} flex flex-col items-center bg-secondary font-manrope text-white selection:bg-secondary/50 selection:text-white`}
       >
         {children}
       </body>

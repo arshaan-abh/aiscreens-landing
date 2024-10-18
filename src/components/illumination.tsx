@@ -1,31 +1,38 @@
+"use client";
+import { type FC, useCallback, useEffect } from "react";
 import HTMLProps from "@/interfaces/html-props";
-import {
-  useState,
-  type FC,
-  useEffect,
-  useCallback,
-  CSSProperties,
-} from "react";
-import "@/styles/illumination.css";
+import useSupportsTouch from "@/hooks/use-supports-touch";
 
 interface IlluminationProps extends HTMLProps<HTMLDivElement> {
   color?: string;
 }
 
 const Illumination: FC<IlluminationProps> = ({
-  className,
+  className = "",
   refProp,
   children,
   ...otherProps
 }) => {
-  const [location, setLocation] = useState({
-    x: 0,
-    y: 0,
-  });
+  const isTouchBased = useSupportsTouch();
 
-  const mouseMoveHandler = useCallback((event: MouseEvent) => {
-    setLocation({ x: event.clientX, y: event.clientY });
-  }, []);
+  const mouseMoveHandler = useCallback(
+    (event: MouseEvent) => {
+      const style = document.body.style;
+      if (
+        style.getPropertyValue("--illumination-x") !==
+          event.clientX.toString() + "px" &&
+        !isTouchBased
+      )
+        style.setProperty("--illumination-x", event.clientX.toString() + "px");
+      if (
+        style.getPropertyValue("--illumination-y") !==
+          event.clientY.toString() + "px" &&
+        !isTouchBased
+      )
+        style.setProperty("--illumination-y", event.clientY.toString() + "px");
+    },
+    [isTouchBased],
+  );
 
   useEffect(() => {
     addEventListener("mousemove", mouseMoveHandler);
@@ -41,15 +48,7 @@ const Illumination: FC<IlluminationProps> = ({
       {...otherProps}
     >
       {children}
-      <div
-        style={
-          {
-            "--illumination-y": location.y + "px",
-            "--illumination-x": location.x + "px",
-          } as CSSProperties
-        }
-        className="illumination pointer-events-none absolute inset-0 bg-fixed"
-      ></div>
+      <div className="pointer-events-none absolute inset-0 bg-fixed bg-easing-radial-illumination" />
     </div>
   );
 };
@@ -57,5 +56,6 @@ const Illumination: FC<IlluminationProps> = ({
 export default Illumination;
 
 // TODO list:
-// 1. set the css custom properties only once
-// 2. use tailwind-easing-gradients instead
+// 1. don't listen multiple times
+// 2. or add transition
+// 3. or detect touch move

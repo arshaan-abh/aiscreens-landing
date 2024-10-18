@@ -22,7 +22,7 @@ const Footer: FC = () => {
         <div className="p-8 pb-4">
           <Logo className="mx-auto mb-8 xs:mx-0" />
           <div className="mb-4 grid grid-cols-[repeat(1,1fr)] gap-x-4 gap-y-8 border-b border-white/20 pb-4 sm:grid-cols-[repeat(2,1fr)]">
-            <div className="flex flex-col gap-4 font-monda text-sm">
+            <div className="flex flex-col gap-4 text-sm">
               <div className="mb-2 font-bold">Features</div>
               <div>Cloud Control Panel</div>
               <div>Notice Board and Media Editor</div>
@@ -32,7 +32,7 @@ const Footer: FC = () => {
               <div>Scheduling Innovation</div>
               <div>Customised Screen Layouts</div>
             </div>
-            <div className="flex flex-col gap-4 font-monda text-sm">
+            <div className="flex flex-col gap-4 text-sm">
               <div className="font-bold">Follow Us On Social Media</div>
               <div className="flex justify-center gap-4 xs:justify-normal">
                 <Facebook />
@@ -62,12 +62,12 @@ const Footer: FC = () => {
             </div>
           </div>
           <div className="mb-4 grid grid-cols-[repeat(1,1fr)] gap-4 border-b border-white/20 pb-4 sm:grid-cols-[repeat(2,1fr)]">
-            <div className="flex items-center font-monda text-sm text-zinc-50">
+            <div className="flex items-center text-sm text-zinc-50">
               Unlock Marketing Freedom with AiScreens: Manage screen marketing
               anytime, anywhere. Craft unforgettable experiences for your
               audience without constraints of time or location.
             </div>
-            <div className="flex flex-col items-center justify-center gap-2 font-monda text-sm xs:items-end">
+            <div className="flex flex-col items-center justify-center gap-2 text-sm xs:items-end">
               <div className="flex items-center gap-2">
                 <div className="text-end">+44 1273 705050</div>
                 <Phone className="shrink-0" />
@@ -85,11 +85,11 @@ const Footer: FC = () => {
             </div>
           </div>
           <div className="grid grid-cols-[repeat(1,1fr)] grid-rows-[repeat(1,1fr)] gap-4 sm:grid-cols-[repeat(2,1fr)]">
-            <div className="font-monda text-xs text-neutral-400">
+            <div className="text-xs text-neutral-400">
               Copyright © 2024 Powered by{" "}
               <span className="font-bold text-white">AiScreens</span>
             </div>
-            <div className="flex justify-center font-monda text-xs font-bold xs:justify-end">
+            <div className="flex justify-center text-xs font-bold xs:justify-end">
               Privacy Policy | Terms of Use
             </div>
           </div>
